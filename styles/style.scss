@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  background-color: #abc;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    background-color: #cba;
+    display: flex;
+    flex-basis: 75px;
+
+    &__entitle {
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      .header__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: url("/let/images/logo.png");
+      }
+    }
+  }
+
+  .main {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    flex-basis: 50px;
+    background-color: #cba;
+
+
+  }
+}
