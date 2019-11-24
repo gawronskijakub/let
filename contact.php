@@ -8,9 +8,14 @@
   <div class="wrap">
     <?php include("templates/header.php"); ?>
     <main class="main">
-      <p>some content, but el contacto</p>
+      <article class="article">
+        <section class="article__section">
+          
+        </section>
+      </article>
     </main>
     <?php include("templates/footer.php"); ?>
   </div>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -41,7 +41,7 @@
                 <label for="last_name">E-mail: </label>
                 <input type="email" name="mail" required autocomplete="off">
                 <label for="last_name">Data urodzenia: </label>
-                <input type="date" name="birth_date" required autocomplete="off">
+                <input type="date" name="birth_date" required autocomplete="off" min="01-01-1900" max="<?php print date("Y-m-d"); ?>">
             </form>
             <div class="article__buttons">
               <button class="article__button" type="button"><a href="#log" class="article__link link">Logowanie&nbsp;<i class="fa fa-arrow-up"></i></a></button>
