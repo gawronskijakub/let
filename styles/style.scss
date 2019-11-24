@@ -137,13 +137,31 @@ html, body {
           height: 75%;
           display: flex;
           justify-content: space-evenly;
-
-
+          
+          
           .article__form {
-            flex-grow: 1;
+            flex: 0 1 60%;
             background-color: #b1a;
             display: flex;
-            flex-direction: column;
+            padding: 10px;
+            flex-flow: row wrap;
+
+            .form__header {
+              width: 100%;
+            }
+
+            label {
+              width: 40%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+            }
+
+            input {
+              width: 60%;
+              height: 7.5%;
+              margin: auto 0;
+            }
           }
 
           .article__buttons {
@@ -185,6 +203,10 @@ html, body {
         &#log {
           font-size: 150%;
         }
+
+        &#reg {
+          font-size: 150%;
+        }
       }
     }
   }
@@ -204,6 +226,10 @@ html, body {
 
       .fa-heart {
         color: crimson;
+      }
+
+      .footer__time {
+        // background-color: #fff;
       }
     }
 
