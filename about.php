@@ -2,12 +2,15 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><?php print $PAGE_TITLE; ?></title>
+  <?php include("templates/head-tag.php"); ?>
 </head>
 <body>
-  
+  <div class="wrap">
+    <?php include("templates/header.php"); ?>
+    <main class="main">
+      <p>some content, but about</p>
+    </main>
+    <?php include("templates/footer.php"); ?>
+  </div>
 </body>
 </html>

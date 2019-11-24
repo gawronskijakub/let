@@ -2,9 +2,15 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <?php include("templates/head-tag.php") ?>
+  <?php include("templates/head-tag.php"); ?>
 </head>
 <body>
-
+  <div class="wrap">
+    <?php include("templates/header.php"); ?>
+    <main class="main">
+      <p>some content, but el contacto</p>
+    </main>
+    <?php include("templates/footer.php"); ?>
+  </div>
 </body>
 </html>

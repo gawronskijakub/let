@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Titillium Web", sans-serif;
-  
+
   &:focus {
     outline: 1px solid gold;
   }
@@ -29,6 +29,7 @@ body, html {
     background-color: #cba;
     display: flex;
     flex-basis: 100px;
+    user-select: none;
 
     &__entitle {
       display: flex;
@@ -81,7 +82,12 @@ body, html {
             transition: .25s;
 
           }
+
           &:hover::before {
+            width: 50%;
+          }
+
+          &.active::before {
             width: 50%;
           }
 
@@ -91,6 +97,7 @@ body, html {
             display: flex;
             justify-content: center;
             align-items: center;
+
           }
         }
       }
@@ -100,6 +107,42 @@ body, html {
   .main {
     flex-grow: 1;
     display: flex;
+    padding: 50px;
+    justify-content: center;
+    
+    .article {
+      background-color: #9e3;
+      width: 100%;
+      height: 650px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      
+      &__section {
+        background-color: #93b;
+        flex-basis: 100%;
+        height: 100%;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+
+        .article__form {
+          width: 40%;
+          height: 75%;
+          background-color: #b1a;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      &__buttons {
+        background-color: #a6e;
+      }
+    }
   }
 
   .footer {
@@ -107,6 +150,7 @@ body, html {
     width: 100%;
     flex-basis: 50px;
     background-color: #cba;
+    user-select: none;
 
     &__copyright {
       flex-basis: 75%;

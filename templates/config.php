@@ -1,19 +1,19 @@
 <?php
 	switch ($_SERVER["SCRIPT_NAME"]) {
-		case "/let/about.php":
-			$CURRENT_PAGE = "About"; 
-			$PAGE_TITLE = "O mnie";
+		case "/let/login.php":
+			$currentPage = "Login";
+			$pageTitle = "Zaloguj się";
 			break;
-    case "/let/login.php":
-      $CURRENT_PAGE = "Login";
-      $PAGE_TITLE = "Zaloguj się";
-      break;
+		case "/let/about.php":
+			$currentPage = "About"; 
+			$pageTitle = "O mnie";
+			break;
 		case "/let/contact.php":
-			$CURRENT_PAGE = "Contact"; 
-			$PAGE_TITLE = "Kontakt";
+			$currentPage = "Contact"; 
+			$pageTitle = "Kontakt";
       break;
 		default:
-			$CURRENT_PAGE = "Index";
-			$PAGE_TITLE = "Strona główna";
+			$currentPage = "Index";
+			$pageTitle = "Strona główna";
 	}
 ?>

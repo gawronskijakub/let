@@ -6,16 +6,16 @@
   </h1>
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__item">
+      <li class="nav__item <?php if($currentPage == "Index") print 'active' ?>">
         <a href="/let/index.php" class="nav__link link">Strona główna</a>
       </li>
-      <li class="nav__item">
+      <li class="nav__item <?php if($currentPage == "Login") print 'active' ?>">
         <a href="/let/login.php" class="nav__link link">Zaloguj się</a>
       </li>
-      <li class="nav__item">
+      <li class="nav__item <?php if($currentPage == "About") print 'active' ?>">
         <a href="/let/about.php" class="nav__link link">O mnie</a>
       </li>
-      <li class="nav__item">
+      <li class="nav__item <?php if($currentPage == "Contact") print 'active' ?>">
         <a href="/let/contact.php" class="nav__link link">Kontakt</a>
       </li>
     </ul>
