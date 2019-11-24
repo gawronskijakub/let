@@ -122,7 +122,7 @@ html, body {
       scroll-snap-type: y mandatory;
       
       &__section {
-        background-color: #93b;
+        background-color: #cba;
         flex-basis: 100%;
         height: 100%;
         padding: 50px;
@@ -130,7 +130,7 @@ html, body {
         justify-content: center;
         align-items: center;
         scroll-snap-align: start;
-
+        
         .form__container {
           // background-color: goldenrod;
           width: 75%;
@@ -141,13 +141,16 @@ html, body {
           
           .article__form {
             flex: 0 1 60%;
-            background-color: #b1a;
+            background-color: #0077b5;
             display: flex;
             padding: 10px;
             flex-flow: row wrap;
+            align-items: flex-start;
+            color: #ffffff;
 
             .form__header {
               width: 100%;
+              height: 20%;
             }
 
             label {
@@ -160,12 +163,22 @@ html, body {
             input {
               width: 60%;
               height: 7.5%;
-              margin: auto 0;
+              // margin: auto 0;
+              text-align: center;
+              font-size: 20px;
+              background-color: #0077b5;
+              color: #fff;
+              border: 0;
+              border-bottom: 2px solid #fff;
+              
+              &:focus {
+                outline: none;
+              }
             }
           }
 
           .article__buttons {
-            background-color: #a6e;
+            background-color: #3b5998;
             flex-basis: 40%;
             display: flex;
             flex-direction: column;
@@ -189,6 +202,10 @@ html, body {
                 background-color: #0077b5;
               }
 
+              &:active {
+                color: #fff;
+              }
+
               .article__link {
                 width: 100%;
                 height: 100%;
@@ -200,11 +217,7 @@ html, body {
           }
         }
 
-        &#log {
-          font-size: 150%;
-        }
-
-        &#reg {
+        &#log, &#reg {
           font-size: 150%;
         }
       }
@@ -226,10 +239,6 @@ html, body {
 
       .fa-heart {
         color: crimson;
-      }
-
-      .footer__time {
-        // background-color: #fff;
       }
     }
 
