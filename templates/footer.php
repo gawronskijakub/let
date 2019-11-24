@@ -2,18 +2,7 @@
   <p class="footer__copyright">
     Made with &nbsp;<i class='fa fa-heart'></i>&nbsp; by JG / 
     <?php echo date("Y"), ' / '; ?>
-    <span class="footer__time">    
-      <?php 
-        echo "<script>
-          const footer__time = document.querySelector('.footer__time');
-          function tick() {
-            let xTime = new Date();
-            footer__time.innerHTML = xTime.toLocaleTimeString();
-          }
-          setInterval(tick,1000);
-          </script>";
-      ?>
-    </span>
+    <span class="footer__time"></span>
   </p>
   <p class="footer__socials">
     <a href="https://www.facebook.com/kubek201" class="footer__link link">
