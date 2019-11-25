@@ -255,6 +255,10 @@ html, body {
   outline: none;
 }
 
+.wrap .main .article__section .form__container .article__form input:invalid {
+  outline: none;
+}
+
 .wrap .main .article__section .form__container .article__buttons {
   background-color: #3b5998;
   -ms-flex-preferred-size: 40%;
@@ -292,10 +296,12 @@ html, body {
 
 .wrap .main .article__section .form__container .article__buttons .article__button:first-of-type {
   background-color: #4caf50;
+  cursor: pointer;
 }
 
 .wrap .main .article__section .form__container .article__buttons .article__button:last-of-type {
   background-color: #0077b5;
+  cursor: pointer;
 }
 
 .wrap .main .article__section .form__container .article__buttons .article__button:active {

@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class="wrap">
-    <?php include("templates/header.php"); ?>
+    <?php include("templates/header-logged.php"); ?>
     <main class="main">
       <article class="article">
         <section class="article__section">

@@ -170,9 +170,14 @@ html, body {
               color: #fff;
               border: 0;
               border-bottom: 2px solid #fff;
+              // background-color: #bbb;
               
               &:focus {
                 outline: none;
+              }
+              
+              &:invalid {
+                outline: none; 
               }
             }
           }
@@ -196,10 +201,12 @@ html, body {
 
               &:first-of-type {
                 background-color: #4caf50;
+                cursor: pointer;
               }
-
+              
               &:last-of-type {
                 background-color: #0077b5;
+                cursor: pointer;
               }
 
               &:active {
