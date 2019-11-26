@@ -18,6 +18,9 @@
       <li class="nav__item <?php if($currentPage == "Contact logged") print 'active' ?>">
         <a href="/let/contact-logged.php" class="nav__link link">Kontakt</a>
       </li>
+      <li class="nav__item" style="width: 25%;">
+        <a href="/let/login.php" class="nav__link link">Wyloguj się</a>
+      </li>
     </ul>
   </nav>
 </header>

@@ -85,11 +85,11 @@ html, body {
           }
 
           &:hover::before {
-            width: 50%;
+            width: 90%;
           }
 
           &.active::before {
-            width: 50%;
+            width: 60%;
           }
 
           .nav__link {
@@ -172,12 +172,8 @@ html, body {
               border-bottom: 2px solid #fff;
               // background-color: #bbb;
               
-              &:focus {
+              &:focus, &:invalid {
                 outline: none;
-              }
-              
-              &:invalid {
-                outline: none; 
               }
             }
           }
@@ -227,6 +223,23 @@ html, body {
         &#log, &#reg {
           font-size: 150%;
         }
+        .tiles {
+          width: 80%;
+          height: 100%;
+          display: flex;
+          flex-flow: row wrap;
+          // background-color: #fff;
+          justify-content: space-evenly;
+
+          .tiles__tile {
+            width: 40%;
+            height: 40%;
+            background-color: #3b5998;
+            padding: 20px;
+            color: #ccc;
+            text-align: justify;
+          }
+        }
       }
     }
   }
@@ -246,6 +259,11 @@ html, body {
 
       .fa-heart {
         color: crimson;
+        transition: .5s;
+
+        &:hover {
+          font-size: 150%;
+        }
       }
     }
 
@@ -277,6 +295,10 @@ html, body {
         &:last-of-type:hover {
           background-color: #6e5494;
           color: #fff;
+        }
+
+        &:hover {
+          font-size: 125%;
         }
       }
     }

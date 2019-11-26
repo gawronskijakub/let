@@ -15,10 +15,11 @@
           Numquam iure molestiae itaque dolor ab labore deserunt nam fugiat soluta at magnam officiis ea aspernatur saepe sunt, modi dolores? Dolorem neque voluptatem distinctio doloribus, repudiandae adipisci voluptates necessitatibus dolore?
           Recusandae, necessitatibus odio? Qui, natus ex? Maxime voluptatibus sit, esse magnam tempora totam facilis omnis, harum, minus voluptates soluta tempore natus facere praesentium dolore magni illum alias explicabo commodi mollitia.
           Totam recusandae magnam, ducimus dolorem eos non doloremque reiciendis iusto eum autem laboriosam rerum mollitia ea voluptatem. Nobis similique architecto numquam eligendi ut magnam ducimus distinctio, blanditiis deserunt consequatur unde?
-      </section>
+        </section>
       </article>
     </main>
     <?php include("templates/footer.php"); ?>
   </div>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
