@@ -11,10 +11,26 @@
       <article class="article">
         <section class="article__section">
           <section class="tiles">
-            <section class="tiles__tile">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum tempore, rerum dolores nulla repudiandae aspernatur aliquid commodi maiores officiis dignissimos delectus culpa, dolore explicabo iste at, neque unde magni minus. Tempora optio architecto incidunt porro facere eaque et soluta, cupiditate excepturi, minima harum nam consectetur neque. Earum ullam eius velit nostrum vero dolores architecto quod, tempore cum et? Dolorum, qui?</section>
-            <section class="tiles__tile">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum tempore, rerum dolores nulla repudiandae aspernatur aliquid commodi maiores officiis dignissimos delectus culpa, dolore explicabo iste at, neque unde magni minus. Tempora optio architecto incidunt porro facere eaque et soluta, cupiditate excepturi, minima harum nam consectetur neque. Earum ullam eius velit nostrum vero dolores architecto quod, tempore cum et? Dolorum, qui?</section>
-            <section class="tiles__tile">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum tempore, rerum dolores nulla repudiandae aspernatur aliquid commodi maiores officiis dignissimos delectus culpa, dolore explicabo iste at, neque unde magni minus. Tempora optio architecto incidunt porro facere eaque et soluta, cupiditate excepturi, minima harum nam consectetur neque. Earum ullam eius velit nostrum vero dolores architecto quod, tempore cum et? Dolorum, qui?</section>
-            <section class="tiles__tile">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum tempore, rerum dolores nulla repudiandae aspernatur aliquid commodi maiores officiis dignissimos delectus culpa, dolore explicabo iste at, neque unde magni minus. Tempora optio architecto incidunt porro facere eaque et soluta, cupiditate excepturi, minima harum nam consectetur neque. Earum ullam eius velit nostrum vero dolores architecto quod, tempore cum et? Dolorum, qui?</section>
+            <section class="tiles__tile">
+              <h2 class="tiles__entitle">
+                <a href="#" class="tiles__link link">Kurs 1</a>
+              </h2>
+            </section>
+            <section class="tiles__tile">
+              <h2 class="tiles__entitle">
+                <a href="#" class="tiles__link link">Kurs 2</a>
+              </h2>
+            </section>
+            <section class="tiles__tile">
+              <h2 class="tiles__entitle">
+                <a href="#" class="tiles__link link">Kurs 3</a>
+              </h2>
+            </section>
+            <section class="tiles__tile">
+              <h2 class="tiles__entitle">
+                <a href="#" class="tiles__link link">Kurs 4</a>
+              </h2>
+            </section>
           </section>
         </section>
       </article>
