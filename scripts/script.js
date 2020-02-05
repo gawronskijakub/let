@@ -3,8 +3,8 @@ const footer__time = document.querySelector('.footer__time');
 
 
 
-
-function tick() {
+// functions
+const tick = () => {
   let xTime = new Date();
   footer__time.innerHTML = xTime.toLocaleTimeString();
 }

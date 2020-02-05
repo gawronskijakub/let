@@ -1,4 +1,7 @@
-<?php include("templates/config.php"); ?>
+<?php 
+  include("templates/config.php"); 
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>

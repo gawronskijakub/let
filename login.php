@@ -1,4 +1,12 @@
-<?php include("templates/config.php"); ?>
+<?php 
+  include("templates/config.php"); 
+  session_start();
+  // if(!empty($_SESSION)) {
+  //     print "<pre>";
+  //     print_r($_SESSION);
+  //     print "</pre>";
+  // }
+?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
@@ -13,10 +21,10 @@
           <section class="form__container">
             <form action="submit-login.php" method="post" class="article__form" id="login_form">
                 <h2 class="form__header">Zaloguj się: </h2>
-                <label for="login">Nazwa użytkownika: </label>
-                <input type="text" name="login_log" tabindex="1" required autocomplete="off">
-                <label for="">Hasło: </label>
-                <input type="text" name="password_log" tabindex="1" required autocomplete="off">
+                <label for="first_name_log">Nazwa użytkownika: </label>
+                <input type="text" name="first_name_log" tabindex="1" required autocomplete="off">
+                <label for="password_log">Hasło: </label>
+                <input type="password" name="password_log" tabindex="1" required autocomplete="off">
             </form>
             <section class="article__buttons">
               <button class="article__button" form="login_form">Logowanie&nbsp;<i class="fa fa-arrow-right"></i></button>
@@ -30,18 +38,19 @@
                 <h2 class="form__header">Zarejestruj się: </h2>
                 <label for="first_name">Imię: </label>
                 <input type="text" name="first_name" required autocomplete="off">
+                <input type="hidden" name="first_nameH" value="<?php print $first_name ?>">
                 <label for="last_name">Nazwisko: </label>
                 <input type="text" name="last_name" required autocomplete="off">
-                <label for="last_name">Nazwa użytkownika: </label>
+                <label for="login">Nazwa użytkownika: </label>
                 <input type="text" name="login" required autocomplete="off">
-                <label for="last_name">Hasło: </label>
+                <label for="password">Hasło: </label>
                 <input type="password" name="password" required autocomplete="off">
-                <label for="last_name">Potwierdź hasło: </label>
+                <label for="password_confirm">Potwierdź hasło: </label>
                 <input type="password" name="password_confirm" required autocomplete="off">
-                <label for="last_name">E-mail: </label>
-                <input type="email" name="mail" required autocomplete="off">
-                <label for="last_name">Data urodzenia: </label>
-                <input type="date" name="birth_date" required autocomplete="off" min="01-01-1900" max="<?php print date("Y-m-d"); ?>">
+                <label for="mail">E-mail: </label>
+                <input type="email" name="email" required autocomplete="off">
+                <label for="birth_date">Data urodzenia: </label>
+                <input type="date" name="birth_date" required autocomplete="off" min="01-01-1900" max="<?php print date("Y-m-d"); ?>" id="data">
             </form>
             <section class="article__buttons">
               <button class="article__button" type="button"><a href="#log" class="article__link link">Logowanie&nbsp;<i class="fa fa-arrow-up"></i></a></button>
