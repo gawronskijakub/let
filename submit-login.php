@@ -2,7 +2,7 @@
   session_start();
   // login form validation
 
-  if(password_verify($_POST["password_log"], $_SESSION["password_hash"])) {
+  if(password_verify($_POST["password_log"], $_SESSION['user']["password_hash"])) {
     
     header("location: logged.php");
   }

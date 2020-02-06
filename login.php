@@ -1,11 +1,8 @@
 <?php 
   include("templates/config.php"); 
   session_start();
-  // if(!empty($_SESSION)) {
-  //     print "<pre>";
-  //     print_r($_SESSION);
-  //     print "</pre>";
-  // }
+
+  
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">

@@ -1,6 +1,12 @@
 <?php 
   include("templates/config.php"); 
   session_start();  
+
+  if(empty($_SESSION['user'])) {
+    header("location: login.php");
+
+    die("Redirecting to login page");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
