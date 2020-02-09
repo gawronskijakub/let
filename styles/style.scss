@@ -304,11 +304,16 @@ html, body {
         transition: .3s;
 
         &:first-of-type:hover {
-          background-color: #3b5998;
+          background-color: #ea4335;
           color: #fff;
         }
 
         &:nth-of-type(2):hover {
+          background-color: #3b5998;
+          color: #fff;
+        }
+
+        &:nth-of-type(3):hover {
           background-color: #0077b5;
           color: #fff;
         }

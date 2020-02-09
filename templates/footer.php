@@ -5,6 +5,9 @@
     <span class="footer__time"></span>
   </p>
   <p class="footer__socials">
+    <a href="mailto:gawronskijakub0@gmail.com" class="footer__link link">
+      <i class="fas fa-envelope-square"></i>
+    </a>
     <a href="https://www.facebook.com/kubek201" class="footer__link link">
       <i class="fab fa-facebook-square"></i>
     </a>

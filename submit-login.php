@@ -20,19 +20,29 @@
     mysqli_stmt_bind_result($stmt, $dbLogin, $dbPass, $dbAdmin);
     mysqli_stmt_fetch($stmt);
 
+
     if(password_verify($_POST['password_log'], $dbPass)) {
       
       $_SESSION['user']['logged_in'] = true;
       $_SESSION['user']['name'] = $dbLogin;
-      $_SESSION['user']['isAdmin'] = $dbAdmin;
+      $_SESSION['user']['admin_status'] = $dbAdmin;
       
       if($dbAdmin == "admin") {
-        header("location: logged.php");  
-      } else {
-        header("location: courses.php");
+        header("location: admin-panel.php");  
+      } 
+      else {
+        header("location: user-panel.php");
       }
     }
+
+    else {
+      header("location: login.php");
+    }
     
+  }
+  
+  else {
+    header("location: login.php");
   }
   
   

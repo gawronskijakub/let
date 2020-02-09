@@ -442,11 +442,16 @@ html, body {
 }
 
 .wrap .footer__socials .footer__link:first-of-type:hover {
-  background-color: #3b5998;
+  background-color: #ea4335;
   color: #fff;
 }
 
 .wrap .footer__socials .footer__link:nth-of-type(2):hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.wrap .footer__socials .footer__link:nth-of-type(3):hover {
   background-color: #0077b5;
   color: #fff;
 }

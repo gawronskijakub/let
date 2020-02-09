@@ -8,8 +8,8 @@
     die("Redirecting to login page");
   }
 
-  if($_SESSION['user']['admin_status'] == "admin") {
-    header("location: contact-logged-admin.php");
+  if($_SESSION['user']['admin_status'] != "admin") {
+    header("location: contact-logged.php");
   }
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 </head>
 <body>
   <div class="wrap">
-    <?php include("templates/header-logged.php"); ?>
+    <?php include("templates/header-logged-admin.php"); ?>
     <main class="main">
       <article class="article">
         <section class="article__section">

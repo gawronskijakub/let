@@ -6,8 +6,8 @@
   </h1>
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__item <?php if($currentPage == "Index logged") print 'active' ?>">
-        <a href="/let/logged.php" class="nav__link link">Strona główna</a>
+      <li class="nav__item <?php if($currentPage == "User panel") print 'active' ?>">
+        <a href="/let/user-panel.php" class="nav__link link">Panel użytkownika</a>
       </li>
       <li class="nav__item <?php if($currentPage == "Courses") print 'active' ?>">
         <a href="/let/courses.php" class="nav__link link">Kursy</a>
