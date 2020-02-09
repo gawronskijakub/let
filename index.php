@@ -1,5 +1,6 @@
 <?php 
-  include("templates/config.php"); 
+  include("scripts/connect.php");
+  include("templates/config.php");
   session_start();
 ?>
 <!DOCTYPE html>

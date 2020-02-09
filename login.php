@@ -2,7 +2,9 @@
   include("templates/config.php"); 
   session_start();
 
-  
+  // print "<pre>";
+  // print_r($_SESSION);
+  // print "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -18,8 +20,8 @@
           <section class="form__container">
             <form action="submit-login.php" method="post" class="article__form" id="login_form">
                 <h2 class="form__header">Zaloguj się: </h2>
-                <label for="first_name_log">Nazwa użytkownika: </label>
-                <input type="text" name="first_name_log" tabindex="1" required autocomplete="off">
+                <label for="login_log">Nazwa użytkownika: </label>
+                <input type="text" name="login_log" tabindex="1" required autocomplete="off">
                 <label for="password_log">Hasło: </label>
                 <input type="password" name="password_log" tabindex="1" required autocomplete="off">
             </form>
@@ -35,7 +37,6 @@
                 <h2 class="form__header">Zarejestruj się: </h2>
                 <label for="first_name">Imię: </label>
                 <input type="text" name="first_name" required autocomplete="off">
-                <input type="hidden" name="first_nameH" value="<?php print $first_name ?>">
                 <label for="last_name">Nazwisko: </label>
                 <input type="text" name="last_name" required autocomplete="off">
                 <label for="login">Nazwa użytkownika: </label>
