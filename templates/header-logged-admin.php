@@ -18,7 +18,7 @@
       <li class="nav__item <?php if($currentPage == "Settings admin") print 'active' ?>">
         <a href="/let/settings-admin.php" class="nav__link link">Ustawienia</a>
       </li>
-      <li class="nav__item <?php if($currentPage == "Contact logged") print 'active' ?>">
+      <li class="nav__item <?php if($currentPage == "Contact logged admin") print 'active' ?>">
         <a href="/let/contact-logged-admin.php" class="nav__link link">Kontakt</a>
       </li>
       <li class="nav__item" style="width: 25%;">

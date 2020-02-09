@@ -7,6 +7,10 @@
 
     die("Redirecting to login page");
   }
+
+  if($_SESSION['user']['admin_status'] == "admin") {
+    header("location: my-account-admin.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">

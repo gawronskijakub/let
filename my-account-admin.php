@@ -8,8 +8,8 @@
     die("Redirecting to login page");
   }
 
-  if($_SESSION['user']['admin_status'] == "admin") {
-    header("location: my-account-admin.php");
+  if($_SESSION['user']['admin_status'] != "admin") {
+    header("location: my-account.php");
   }
 ?>
 <!DOCTYPE html>
