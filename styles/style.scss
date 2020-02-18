@@ -330,3 +330,87 @@ html, body {
     }
   }
 }
+
+@media screen and (max-width: 1550px) {
+  body {
+    .wrap {
+      .main { 
+        .article__section { 
+          .form__container {
+            height: 105%;
+            .article__form {
+              flex-flow: column nowrap;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  body {
+    .wrap {
+      .main { 
+        .article__section { 
+          .form__container {
+            height: 120%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1120px) {
+  body {
+    .wrap {
+      .main { 
+        .article__section { 
+          .form__container {
+            .article__form {
+              // flex-flow: column nowrap;
+              // align-items: center;
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    .wrap {
+      .main { 
+        .article__section { 
+          .form__container {
+            width: 100%;
+            // .article__form {
+            //   flex-flow: column nowrap;
+            //   align-items: center;
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  body {
+    .wrap {
+      .header__entitle {
+            display: none;
+          }
+      .main { 
+        .article__section {
+          overflow: auto; 
+          .form__container {
+            .article__form {
+              flex: 0 1 75%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

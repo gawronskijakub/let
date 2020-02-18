@@ -464,3 +464,50 @@ html, body {
 .wrap .footer__socials .footer__link:hover {
   font-size: 125%;
 }
+
+@media screen and (max-width: 1550px) {
+  body .wrap .main .article__section .form__container {
+    height: 105%;
+  }
+  body .wrap .main .article__section .form__container .article__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  body .wrap .main .article__section .form__container {
+    height: 120%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  body .wrap .main .article__section .form__container .article__form {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body .wrap .main .article__section .form__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body .wrap .header__entitle {
+    display: none;
+  }
+  body .wrap .main .article__section {
+    overflow: auto;
+  }
+  body .wrap .main .article__section .form__container .article__form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+  }
+}
