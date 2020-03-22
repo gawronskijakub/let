@@ -33,7 +33,7 @@
         </section>
         <section class="article__section" id="reg">
         <section class="form__container">
-            <form action="submit-register.php" method="post" class="article__form" id="reg_form">
+            <form action="./submit-register.php" method="post" class="article__form" id="reg_form">
                 <h2 class="form__header">Zarejestruj się: </h2>
                 <label for="first_name">Imię: </label>
                 <input type="text" name="first_name" required autocomplete="off">
@@ -45,10 +45,10 @@
                 <input type="password" name="password" required autocomplete="off">
                 <label for="password_confirm">Potwierdź hasło: </label>
                 <input type="password" name="password_confirm" required autocomplete="off">
-                <label for="mail">E-mail: </label>
+                <label for="email">E-mail: </label>
                 <input type="email" name="email" required autocomplete="off">
                 <label for="birth_date">Data urodzenia: </label>
-                <input type="date" name="birth_date" required autocomplete="off" min="01-01-1900" max="<?php print date("Y-m-d"); ?>" id="data">
+                <input type="date" name="birth_date" required autocomplete="off" min="01-01-1900" max="<?php print date("Y-m-d"); ?>">
             </form>
             <section class="article__buttons">
               <button class="article__button" type="button"><a href="#log" class="article__link link">Logowanie&nbsp;<i class="fa fa-arrow-up"></i></a></button>

@@ -203,7 +203,7 @@ html, body {
           justify-content: space-evenly;
 }
 
-.wrap .main .article__section .form__container .article__form {
+.wrap .main .article__section .form__container .article__form, .wrap .main .article__section .form__container #update_form {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 60%;
           flex: 0 1 60%;
@@ -222,12 +222,12 @@ html, body {
   color: #ffffff;
 }
 
-.wrap .main .article__section .form__container .article__form .form__header {
+.wrap .main .article__section .form__container .article__form .form__header, .wrap .main .article__section .form__container #update_form .form__header {
   width: 100%;
   height: 20%;
 }
 
-.wrap .main .article__section .form__container .article__form label {
+.wrap .main .article__section .form__container .article__form label, .wrap .main .article__section .form__container #update_form label {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,7 +240,7 @@ html, body {
           align-items: center;
 }
 
-.wrap .main .article__section .form__container .article__form input {
+.wrap .main .article__section .form__container .article__form input, .wrap .main .article__section .form__container #update_form input {
   width: 60%;
   height: 7.5%;
   text-align: center;
@@ -251,7 +251,7 @@ html, body {
   border-bottom: 2px solid #fff;
 }
 
-.wrap .main .article__section .form__container .article__form input:focus, .wrap .main .article__section .form__container .article__form input:invalid {
+.wrap .main .article__section .form__container .article__form input:focus, .wrap .main .article__section .form__container .article__form input:invalid, .wrap .main .article__section .form__container #update_form input:focus, .wrap .main .article__section .form__container #update_form input:invalid {
   outline: none;
 }
 
@@ -337,7 +337,20 @@ html, body {
           justify-content: space-evenly;
 }
 
-.wrap .main .article__section .tiles .tiles__tile {
+.wrap .main .article__section .tiles #upform #update_form {
+  width: 500px;
+  border: 1px solid;
+  background-color: #3b5998;
+  margin-left: -40%;
+  padding: 25px;
+}
+
+.wrap .main .article__section .tiles #upform #update_form label {
+  display: inline-block;
+  width: 200px;
+}
+
+.wrap .main .article__section .tiles .tiles__tile, .wrap .main .article__section .tiles .btn {
   width: 40%;
   height: 40%;
   background-color: #3b5998;
@@ -345,13 +358,15 @@ html, body {
   text-align: justify;
 }
 
-.wrap .main .article__section .tiles .tiles__tile .tiles__entitle {
+.wrap .main .article__section .tiles .tiles__tile .tiles__entitle, .wrap .main .article__section .tiles .tiles__tile .btn, .wrap .main .article__section .tiles .btn .tiles__entitle, .wrap .main .article__section .tiles .btn .btn {
   font-size: 50px;
   width: 100%;
   height: 100%;
+  border: none;
+  cursor: pointer;
 }
 
-.wrap .main .article__section .tiles .tiles__tile .tiles__entitle .tiles__link {
+.wrap .main .article__section .tiles .tiles__tile .tiles__entitle .tiles__link, .wrap .main .article__section .tiles .tiles__tile .tiles__entitle .btn, .wrap .main .article__section .tiles .tiles__tile .btn .tiles__link, .wrap .main .article__section .tiles .tiles__tile .btn .btn, .wrap .main .article__section .tiles .btn .tiles__entitle .tiles__link, .wrap .main .article__section .tiles .btn .tiles__entitle .btn, .wrap .main .article__section .tiles .btn .btn .tiles__link, .wrap .main .article__section .tiles .btn .btn .btn {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -367,7 +382,7 @@ html, body {
   transition: .5s;
 }
 
-.wrap .main .article__section .tiles .tiles__tile .tiles__entitle .tiles__link:hover {
+.wrap .main .article__section .tiles .tiles__tile .tiles__entitle .tiles__link:hover, .wrap .main .article__section .tiles .tiles__tile .tiles__entitle .btn:hover, .wrap .main .article__section .tiles .tiles__tile .btn .tiles__link:hover, .wrap .main .article__section .tiles .tiles__tile .btn .btn:hover, .wrap .main .article__section .tiles .btn .tiles__entitle .tiles__link:hover, .wrap .main .article__section .tiles .btn .tiles__entitle .btn:hover, .wrap .main .article__section .tiles .btn .btn .tiles__link:hover, .wrap .main .article__section .tiles .btn .btn .btn:hover {
   font-size: 55px;
 }
 
