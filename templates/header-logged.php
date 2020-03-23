@@ -1,6 +1,6 @@
 <header class="header">
   <h1 class="header__entitle">
-    <a href="/let/logged.php" class="header__link link" title="LET Strona główna (zalogowany)">
+    <a href="/let/user-panel.php" class="header__link link" title="LET Strona główna (zalogowany)">
       <img src="/let/images/logo.png" alt="LET logo" class="header__logo">
     </a>
   </h1>

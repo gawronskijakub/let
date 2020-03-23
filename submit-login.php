@@ -44,13 +44,13 @@
     }
 
     else {
-      header("location: login.php");
+      header("location: login.php?wrong_pass=1");
     }
     
   }
   
   else {
-    header("location: login.php");
+    header("location: login.php?no_data=1");
   }
   
   

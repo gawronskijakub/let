@@ -1,5 +1,6 @@
 <?php 
   include("templates/config.php"); 
+  include("./scripts/connect.php"); 
   session_start();
 
   if(empty($_SESSION['user'])) {
@@ -23,26 +24,25 @@
     <main class="main">
       <article class="article">
         <section class="article__section">
-          <section class="tiles">
-            <section class="tiles__tile">
-              <h2 class="tiles__entitle">
-                <a href="./translating.php" class="tiles__link link">Kurs 1</a>
-              </h2>
-            </section>
-            <section class="tiles__tile">
-              <h2 class="tiles__entitle">
-                <a href="#" class="tiles__link link">Kurs 2</a>
-              </h2>
-            </section>
-            <section class="tiles__tile">
-              <h2 class="tiles__entitle">
-                <a href="#" class="tiles__link link">Kurs 3</a>
-              </h2>
-            </section>
-            <section class="tiles__tile">
-              <h2 class="tiles__entitle">
-                <a href="#" class="tiles__link link">Kurs 4</a>
-              </h2>
+          <section class="courses">
+            <section class="courses__course">
+              <h2 class="course__entitle">Nauka słówek</h2>
+              <div class="course__content">
+                <div id="slider">
+                <a href="#" class="control_next">></a>
+                <a href="#" class="control_prev"><</a>
+                  <?php
+                    $sql = "SELECT * FROM `words`;";
+                    $res = mysqli_query($link, $sql);
+                    echo "<ul class='list'>";
+                    while($row = mysqli_fetch_assoc($res)) {
+                      echo "<li class='polish'>$row[polish]</li>";
+                      echo "<li class='english'>$row[english]</li>";
+                    }
+                    echo "</ul>";
+                  ?>
+                </div>
+              </div>
             </section>
           </section>
         </section>
@@ -51,5 +51,44 @@
     <?php include("templates/footer.php"); ?>
   </div>
   <script src="./scripts/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    var slideCount = $('#slider ul li').length;
+    var slideWidth = $('#slider ul li').width();
+    var slideHeight = $('#slider ul li').height();
+    var sliderUlWidth = slideCount * slideWidth;
+
+    // $('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	  // $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    // $('#slider ul li:last-child').prependTo('#slider ul');
+
+    const moveLeft = () => {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, () => {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    const moveRight = () => {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, () => {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').on("click", () => {
+        moveLeft();
+    });
+
+    $('a.control_next').on("click", () => {
+        moveRight();
+    });
+  </script>
 </body>
 </html>

@@ -2,9 +2,24 @@
   include("templates/config.php"); 
   session_start();
 
-  // print "<pre>";
-  // print_r($_SESSION);
-  // print "</pre>";
+  if(!empty($_GET['wrong_pass'])) {
+    echo "
+    <script>
+      var ask = window.confirm('Błedne hasło. Spróbuj ponownie.');
+      if(ask) window.location = './login.php';
+      else window.location = './login.php';
+    </script>";
+  }
+
+  if(!empty($_GET['no_data'])) {
+    echo "
+    <script>
+      var ask = window.confirm('Nie ma takiego użytkownika');
+      if(ask) window.location = './login.php';
+      else window.location = './login.php';
+    </script>";
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
