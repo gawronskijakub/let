@@ -42,6 +42,13 @@
                 <button class="btn" id="deleteUser">Usuń</button>
               </h2>
             </section>
+            <?php
+              if(!empty($_GET['del'])) {
+                echo <<< SCR
+                
+SCR;
+              }
+            ?>
             <?php 
               if(!empty($_GET["update"])) {
                 $login = $_SESSION["user"]["name"];
@@ -58,7 +65,7 @@
                   $birth_date = $row["birth_date"];
                 }
                 echo <<< F
-                <section class="tiles__tile" id="upform">
+                <section id="upform">
                   <form action="./scripts/update-user.php" method="post" class="article__form" id="update_form">
                       <h2 class="form__header">Zmień dane: </h2>
                       <label for="first_name">Imię: </label>
@@ -68,7 +75,7 @@
                       <label for="login">Nazwa użytkownika: </label>
                       <input type="text" name="login" required value="$login"><br>
                       <label for="password">Hasło: </label>
-                      <input type="password" name="password" required ><br>
+                      <input type="password" name="password" required placeholder='obecne, jeżeli bez zmian'><br>
                       <label for="email">E-mail: </label>
                       <input type="email" name="email" required value="$email"><br>
                       <label for="birth_date">Data urodzenia: </label>
@@ -79,24 +86,7 @@
                   </form>
                 </section>
 F;
-                echo <<< SCR
-                <script>
-                  // const deleteUser = document.querySelector("#deleteUser");
-                  const deleteConfirmation = () => {
-                    let ask = window.confirm("Czy na pewno chcesz usunąć konto?");
-                    if(ask) {
-                      window.alert("Twoje konto zostało pomyślnie usunięte.");
-                      window.location.href = "./scripts/del-user.php";
-                    } else {
-                      window.location.href = "./my-account.php";
-                    }
-                  }
-                  // deleteUser.addEventListener("click", deleteConfirmation);
-                  document.querySelector("#deleteUser").addEventListener("click", deleteConfirmation);
-                </script>
-SCR;
-              }
-            ?>
+              } ?>
           </section>
         </section>
       </article>
@@ -104,6 +94,18 @@ SCR;
     <?php include("templates/footer.php"); ?>
   </div>
   <script src="scripts/script.js"></script>
+  <script>
+    const deleteConfirmation = () => {
+      let ask = window.confirm("Czy na pewno chcesz usunąć konto?");
+      if(ask) {
+        window.alert("Twoje konto zostało pomyślnie usunięte.");
+        window.location.href = "./scripts/del-user.php";
+      } else {
+        window.location.href = "./my-account.php";
+      }
+    }
+    document.querySelector("#deleteUser").addEventListener("click", deleteConfirmation);
+  </script>
 </body>
 </html>
 <?php mysqli_close($link); ?>

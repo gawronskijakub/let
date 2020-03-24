@@ -26,7 +26,7 @@
           <section class="tiles">
             <section class="tiles__tile">
               <h2 class="tiles__entitle">
-                <a href="./translating.php" class="tiles__link link">Kurs 1</a>
+                <a href="./translating.php" class="tiles__link link">Nauka słówek</a>
               </h2>
             </section>
             <section class="tiles__tile">

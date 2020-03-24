@@ -143,7 +143,7 @@ html, body {
           justify-content: space-evenly;
           
           
-          .article__form, #update_form {
+          .article__form {
             flex: 0 1 60%;
             background-color: #0077b5;
             display: flex;
@@ -238,13 +238,14 @@ html, body {
           #upform {
             #update_form {
               width: 500px;
-              border: 1px solid;
+              // border: 1px solid;
               background-color: #3b5998;
               margin-left: -40%;
               padding: 25px;
               label {
                 display: inline-block;
                 width: 200px;
+                color: #ccc;
               }
             }
           }
@@ -292,39 +293,48 @@ html, body {
               display: flex;
               justify-content: center;
               align-items: center;
+              flex-direction: column;
 
-              div {
+              .arrows {
+                position: absolute;
+                height: 350px;
+                width: 500px;
+                // border: 1px solid;
+              }
+
+              a.control_prev, a.control_next {
+                position: absolute;
+                top: 40%;
+                z-index: 999;
+                display: block;
+                padding: 30px 20px;
+                width: auto;
+                height: auto;
+                background: #2a2a2a;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 18px;
+                opacity: 0.8;
+                cursor: pointer;
+              }
+              a.control_next {
+                right: 0;
+              }
+              a.control_prev:hover, a.control_next:hover {
+                opacity: 1;
+                transition: all 0.2s ease;
+              }
+
+              #slider1, #slider2 {
                 position: relative;
                 overflow: hidden;
                 // border: 1px solid;
-                // height: 500px;
-                a.control_prev, a.control_next {
-                  position: absolute;
-                  top: 40%;
-                  z-index: 999;
-                  display: block;
-                  padding: 4% 3%;
-                  width: auto;
-                  height: auto;
-                  background: #2a2a2a;
-                  color: #fff;
-                  text-decoration: none;
-                  font-weight: 600;
-                  font-size: 18px;
-                  opacity: 0.8;
-                  cursor: pointer;
-                }
-                a.control_next {
-                  right: 0;
-                }
-                a.control_prev:hover, a.control_next:hover {
-                  opacity: 1;
-                  transition: all 0.2s ease;
-                }
+                height: 350px;
                 ul {
                   overflow: hidden;
                   width: 500px;
-                  height: 400px;
+                  height: 100%;
                   display: flex;
                   flex-flow: column wrap;
                   padding-top: 75px;
