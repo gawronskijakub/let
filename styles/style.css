@@ -355,7 +355,7 @@ html, body {
 }
 
 .wrap .main .article__section .tiles .tiles__tile, .wrap .main .article__section .tiles .btn {
-  width: 40%;
+  width: 47.5%;
   height: 40%;
   background-color: #3b5998;
   color: #ccc;
@@ -363,7 +363,7 @@ html, body {
 }
 
 .wrap .main .article__section .tiles .tiles__tile .tiles__entitle, .wrap .main .article__section .tiles .tiles__tile .btn, .wrap .main .article__section .tiles .btn .tiles__entitle, .wrap .main .article__section .tiles .btn .btn {
-  font-size: 50px;
+  font-size: 30px;
   width: 100%;
   height: 100%;
   border: none;
@@ -376,18 +376,35 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: .5s;
   transition: .5s;
+  text-align: center;
 }
 
 .wrap .main .article__section .tiles .tiles__tile .tiles__entitle .tiles__link:hover, .wrap .main .article__section .tiles .tiles__tile .tiles__entitle .btn:hover, .wrap .main .article__section .tiles .tiles__tile .btn .tiles__link:hover, .wrap .main .article__section .tiles .tiles__tile .btn .btn:hover, .wrap .main .article__section .tiles .btn .tiles__entitle .tiles__link:hover, .wrap .main .article__section .tiles .btn .tiles__entitle .btn:hover, .wrap .main .article__section .tiles .btn .btn .tiles__link:hover, .wrap .main .article__section .tiles .btn .btn .btn:hover {
-  font-size: 55px;
+  font-size: 110%;
+}
+
+.wrap .main .article__section .tiles .tiles__tile .tiles__entitle .tiles__link:hover img, .wrap .main .article__section .tiles .tiles__tile .tiles__entitle .btn:hover img, .wrap .main .article__section .tiles .tiles__tile .btn .tiles__link:hover img, .wrap .main .article__section .tiles .tiles__tile .btn .btn:hover img, .wrap .main .article__section .tiles .btn .tiles__entitle .tiles__link:hover img, .wrap .main .article__section .tiles .btn .tiles__entitle .btn:hover img, .wrap .main .article__section .tiles .btn .btn .tiles__link:hover img, .wrap .main .article__section .tiles .btn .btn .btn:hover img {
+  width: 80px;
+  height: 55px;
+}
+
+.wrap .main .article__section .tiles .tiles__tile .tiles__entitle .tiles__link img, .wrap .main .article__section .tiles .tiles__tile .tiles__entitle .btn img, .wrap .main .article__section .tiles .tiles__tile .btn .tiles__link img, .wrap .main .article__section .tiles .tiles__tile .btn .btn img, .wrap .main .article__section .tiles .btn .tiles__entitle .tiles__link img, .wrap .main .article__section .tiles .btn .tiles__entitle .btn img, .wrap .main .article__section .tiles .btn .btn .tiles__link img, .wrap .main .article__section .tiles .btn .btn .btn img {
+  width: 75px;
+  height: 50px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .wrap .main .article__section .courses {
@@ -472,13 +489,9 @@ html, body {
 }
 
 .wrap .main .article__section .courses__course .course__content #slider1 ul li, .wrap .main .article__section .courses__course .course__content #slider2 ul li {
-  border: 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -491,8 +504,31 @@ html, body {
 }
 
 .wrap .main .article__section .courses__course .course__content #slider1 ul li img, .wrap .main .article__section .courses__course .course__content #slider2 ul li img {
-  width: 100px;
+  width: 75px;
   height: 50px;
+}
+
+.wrap .main .article__section .courses__course .course__content #slider1 form, .wrap .main .article__section .courses__course .course__content #slider2 form {
+  overflow: hidden;
+  width: 500px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding-top: 75px;
+  position: relative;
+}
+
+.wrap .main .article__section .courses__course .course__content #slider1 form input, .wrap .main .article__section .courses__course .course__content #slider2 form input {
+  text-align: center;
+  font-size: 2em;
+  height: 70%;
+  width: 100%;
+  display: inline-block;
 }
 
 .wrap .footer {

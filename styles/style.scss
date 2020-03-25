@@ -250,7 +250,7 @@ html, body {
             }
           }
           .tiles__tile, .btn {
-            width: 40%;
+            width: 47.5%;
             height: 40%;
             background-color: #3b5998;
             // padding: 20px;
@@ -258,7 +258,7 @@ html, body {
             text-align: justify;
 
             .tiles__entitle, .btn {
-              font-size: 50px;
+              font-size: 30px;
               // background-color: #fff;
               width: 100%;
               height: 100%;
@@ -269,13 +269,26 @@ html, body {
                 width: 100%;
                 height: 100%;
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
+                flex-direction: column;
                 transition: .5s;
                 // background-color: #fff;
+                text-align: center;
                 
                 &:hover {
-                  font-size: 55px;
+                  font-size: 110%;
+
+                  img {
+                    width: 80px;
+                    height: 55px;
+                  }
+                }
+
+                img {
+                  width: 75px;
+                  height: 50px;
+                  transition: .5s;
                 }
               }
             }
@@ -343,23 +356,35 @@ html, body {
                   // border: 1px solid;
 
                   li {
-                    border: 1px solid;
+                    // border: 1px solid;
                     display: flex;
-                    justify-content: center;
                     justify-content: space-evenly;
                     align-items: center;
                     font-size: 2em;
                     height: 70%;
                     width: 100%;
-                    // position: relative;
 
-                    // &:nth-of-type(even) {
-                    //   background-image: url("poland.jpg");
-                    // }
                     img {
-                      width: 100px;
+                      width: 75px;
                       height: 50px;
                     }
+                  }
+                }
+                form {
+                  overflow: hidden;
+                  width: 500px;
+                  height: 100%;
+                  display: flex;
+                  flex-flow: column wrap;
+                  padding-top: 75px;
+                  position: relative;
+
+                  input {
+                    text-align: center;
+                    font-size: 2em;
+                    height: 70%;
+                    width: 100%;
+                    display: inline-block;
                   }
                 }
               }
