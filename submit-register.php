@@ -36,7 +36,6 @@
         
 
         include("scripts/add-user.php");
-        // header("location: scripts/add-user.php");
 
         header("location: login.php#log");
       }

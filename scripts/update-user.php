@@ -6,13 +6,6 @@
 	//updating in database
 	$user = "SELECT * FROM `users` WHERE `user_id` = '$id';";
 	$update = "UPDATE `users` SET";
-	
-	echo "<pre>";
-	print_r($_SESSION);
-	echo "</pre>";
-	echo "<pre>";
-	print_r($_POST);
-	echo "</pre>";
 
 	$res1 = mysqli_query($link, $user);
 	$i = 0;

@@ -1,16 +1,6 @@
 <?php
 	session_start();
 	include("connect.php");
-  
-  // if(empty($_SESSION['user'])) {
-  //   header("location: /let/login.php");
-
-  //   die("Redirecting to login page");
-  // }
-	// echo "<pre>";
-	// print_r($_SESSION);
-	// echo "</pre>";
-
 
 	//adding to database
 

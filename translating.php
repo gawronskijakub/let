@@ -38,10 +38,10 @@
                     $res = mysqli_query($link, $sql);
                     echo "<ul class='list'>";
                     while($row = mysqli_fetch_assoc($res)) {
-                      echo "<li class='polish'>$row[polish]</li>";
+                      echo "<li class='polish'><img src='/let/images/poland.jpg'>$row[polish]</li>";
                     }
                     echo "</ul>";
-                  ?>
+                    ?>
                 </div>
                 <div id="slider2">
                   <?php
@@ -49,7 +49,7 @@
                     $res = mysqli_query($link, $sql);
                     echo "<ul class='list'>";
                     while($row = mysqli_fetch_assoc($res)) {
-                      echo "<li class='english'>$row[english]</li>";
+                      echo "<li class='english'><img src='/let/images/great_britain.png'>$row[english]</li>";
                     }
                     echo "</ul>";
                   ?>

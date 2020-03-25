@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include("connect.php");
-  include("vars.php");
+	include("vars.php");
 
 	//deleting from database
 

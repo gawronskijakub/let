@@ -43,6 +43,7 @@
               </h2>
             </section>
             <?php
+            // print_r($_SESSION);
               if(!empty($_GET['del'])) {
                 echo <<< SCR
                 
