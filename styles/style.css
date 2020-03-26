@@ -414,6 +414,8 @@ html, body {
 
 .wrap .main .article__section .courses__course .course__entitle {
   width: 100%;
+  text-align: center;
+  margin-bottom: -30px;
 }
 
 .wrap .main .article__section .courses__course .course__content {
@@ -508,6 +510,10 @@ html, body {
   height: 50px;
 }
 
+.wrap .main .article__section .courses__course .course__content #slider1 ul li span, .wrap .main .article__section .courses__course .course__content #slider2 ul li span {
+  display: none;
+}
+
 .wrap .main .article__section .courses__course .course__content #slider1 form, .wrap .main .article__section .courses__course .course__content #slider2 form {
   overflow: hidden;
   width: 500px;
@@ -529,6 +535,12 @@ html, body {
   height: 70%;
   width: 100%;
   display: inline-block;
+  outline: none;
+  border: none;
+}
+
+.wrap .main .article__section .courses__course .course__content #slider1 form input:disabled, .wrap .main .article__section .courses__course .course__content #slider2 form input:disabled {
+  color: inherit;
 }
 
 .wrap .footer {
