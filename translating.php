@@ -64,48 +64,6 @@
   </div>
   <script src="./scripts/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-    var slideCount = $('#slider1 ul li').length;
-    var slideWidth = $('#slider1 ul li').width();
-    var slideHeight = $('#slider1 ul li').height();
-
-    const moveLeft = () => {
-        $('#slider1 ul').animate({
-            left: + slideWidth
-        }, 200, () => {
-            $('#slider1 ul li:last-child').prependTo('#slider1 ul');
-            $('#slider1 ul').css('left', '');
-        });
-        $('#slider2 ul').animate({
-            left: + slideWidth
-        }, 200, () => {
-            $('#slider2 ul li:last-child').prependTo('#slider2 ul');
-            $('#slider2 ul').css('left', '');
-        });
-    };
-
-    const moveRight = () => {
-        $('#slider1 ul').animate({
-            left: - slideWidth
-        }, 200, () => {
-            $('#slider1 ul li:first-child').appendTo('#slider1 ul');
-            $('#slider1 ul').css('left', '');
-        });
-        $('#slider2 ul').animate({
-            left: - slideWidth
-        }, 200, () => {
-            $('#slider2 ul li:first-child').appendTo('#slider2 ul');
-            $('#slider2 ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').on("click", () => {
-        moveLeft();
-    });
-
-    $('a.control_next').on("click", () => {
-        moveRight();
-    });
-  </script>
+  <script src="./scripts/slider.js"></script>
 </body>
 </html>
