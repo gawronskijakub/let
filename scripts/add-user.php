@@ -12,19 +12,7 @@
 
 	mysqli_stmt_execute($stmt);
 
-	// echo "<pre>";
-	// print_r($_SESSION);
-  // echo "</pre>";
-  
-	// if(mysqli_stmt_num_rows() > 0)
-	// 	echo "Row inserted. Affected rows: ", mysqli_stmt_num_rows($stmt);
-
-	// else 
-	// 	echo "Row not inserted. Affected rows: ", mysqli_stmt_num_rows($stmt), '. ', mysqli_stmt_error($stmt);
-
 	mysqli_stmt_close($stmt);
-	// var_dump($account_status);
-
 
 	mysqli_close($link);
 

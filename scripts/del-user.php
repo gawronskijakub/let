@@ -6,9 +6,6 @@
 	//deleting from database
 
 	$sql = "DELETE FROM `users` WHERE `login` = '$login';";
-	
-	// print_r($_SESSION);
-	echo $login;
 
 	mysqli_query($link, $sql);
 
