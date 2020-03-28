@@ -20,6 +20,12 @@
     </script>";
   }
 
+  if(!empty($_GET["deleted"]) && $_GET["deleted"] == "yup") {
+    echo "
+      <script>alert('Twoje konto zostało usunięte.');</script>
+    ";
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">

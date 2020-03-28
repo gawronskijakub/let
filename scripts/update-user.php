@@ -58,7 +58,7 @@
 			if($i > 0) {
 				$update .= ", `birth_date` = '$_POST[birth_date]'";
 			} else {
-				$update .= ", `birth_date` = '$_POST[birth_date]'";
+				$update .= " `birth_date` = '$_POST[birth_date]'";
 			}
 		}
 	}
@@ -67,14 +67,26 @@
 	$update .= " WHERE `user_id` = $id;";
 
 	if(password_verify($_POST['old_password'], $oldPass)) {
-		$res = mysqli_query($link, $update);
+		mysqli_query($link, $update);
 		if(mysqli_affected_rows($link) > 0) {
-			header("Location: ./../my-account.php?yup=1");
+			if($_SESSION["user"]["admin_status"] === "admin") {
+				header("Location: ./../my-account-admin.php?updated=yup");
+			} else {
+				header("Location: ./../my-account.php?updated=yup");
+			}
 		} else {
-			header("Location: ./../my-account.php?nope=1");
+			if($_SESSION["user"]["admin_status"] === "admin") {
+				header("Location: ./../my-account-admin.php?updated=nope");
+			} else {
+				header("Location: ./../my-account.php?updated=nope");
+			}
 		}
 	} else {
-		header("Location: ./../my-account.php?nope=1");
+		if($_SESSION["user"]["admin_status"] === "admin") {
+			header("Location: ./../my-account-admin.php?updated=nope");
+		} else {
+			header("Location: ./../my-account.php?updated=nope");
+		}
 	}
 
 	mysqli_close($link);

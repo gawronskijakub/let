@@ -7,10 +7,6 @@
 
     die("Redirecting to login page");
   }
-
-  if($_SESSION['user']['admin_status'] == "admin") {
-    header("location: courses-admin.php");
-  }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -19,7 +15,13 @@
 </head>
 <body>
   <div class="wrap">
-    <?php include("templates/header-logged.php"); ?>
+    <?php 
+      if($_SESSION["user"]["admin_status"] === "admin") {
+        include("templates/header-logged-admin.php"); 
+      } else {
+        include("templates/header-logged.php"); 
+      }
+    ?>
     <main class="main">
       <article class="article">
         <section class="article__section">

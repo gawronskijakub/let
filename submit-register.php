@@ -1,7 +1,7 @@
 <?php
   session_start();
   // register form validation
-  include("scripts/connect.php");
+  include("./scripts/connect.php");
 
   if(
       !empty($_POST['first_name']) &&
@@ -35,15 +35,16 @@
 
         
 
-        include("scripts/add-user.php");
+        include("./scripts/add-user.php");
 
-        header("location: login.php#log");
+        header("location: ./login.php#log");
       }
       else {
 
-        header("location: login.php#reg");
+        header("location: ./login.php#reg");
 
         die("Incorrect passwords. Redirecting to registration page");
       }
   }
+  mysqli_close($link);
 ?>

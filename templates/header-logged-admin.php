@@ -10,7 +10,7 @@
         <a href="/let/admin-panel.php" class="nav__link link">Panel administracyjny</a>
       </li>
       <li class="nav__item <?php if($currentPage == "Courses admin") print 'active' ?>">
-        <a href="/let/courses-admin.php" class="nav__link link">Kursy</a>
+        <a href="/let/courses.php" class="nav__link link">Kursy</a>
       </li>
       <li class="nav__item <?php if($currentPage == "My account admin") print 'active' ?>">
         <a href="/let/my-account-admin.php" class="nav__link link">Moje konto</a>

@@ -14,7 +14,4 @@
   $account_type = $_SESSION['user']['account_type'];
 
   unset($_SESSION['user']['password_hash']);
-  unset($_SESSION['user']['create_date']);
-  unset($_SESSION['user']['account_status']);
-  unset($_SESSION['user']['account_type']);
 ?>

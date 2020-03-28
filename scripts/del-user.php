@@ -9,13 +9,15 @@
 
 	mysqli_query($link, $sql);
 
-	if($sql) {
-		header("Location: ./../login.php");
+	if(mysqli_affected_rows($link) > 0) {
+		header("Location: ./../login.php?deleted=yup");
 	} else {
-		header("Location: ./my-account.php?nope=1");
+		if($_SESSION["user"]["admin_status"] === "admin") {
+			header("Location: ./../my-account-admin.php?deleted=nope");
+		} else {
+			header("Location: ./../my-account.php?deleted=nope");
+		}
 	}
 
 	mysqli_close($link);
-
-	
 ?>

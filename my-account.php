@@ -4,37 +4,40 @@
   session_start();  
 
   if(empty($_SESSION['user'])) {
-    header("location: login.php");
+    header("location: ./login.php");
 
     die("Redirecting to login page");
   }
 
-  if($_SESSION['user']['admin_status'] == "admin") {
-    header("location: my-account-admin.php");
-  }
-
-  if(!empty($_GET["yup"])) {
+  if($_GET["updated"] == "yup") {
     echo "<script>alert('Twoje dane zostały zaktualizowane.');</script>";
   }
-  if(!empty($_GET["nope"])) {
+
+  if($_GET["updated"] == "nope") {
     echo "<script>alert('Twoje dane nie zostały zaktualizowane.');</script>";
   }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <?php include("templates/head-tag.php"); ?>
+  <?php include("./templates/head-tag.php"); ?>
 </head>
 <body>
   <div class="wrap">
-    <?php include("templates/header-logged.php"); ?>
+    <?php 
+      if($_SESSION["user"]["admin_status"] === "admin") {
+        include("templates/header-logged-admin.php"); 
+      } else {
+        include("templates/header-logged.php"); 
+      }
+    ?>
     <main class="main">
       <article class="article">
         <section class="article__section">
           <section class="tiles">
             <section class="tiles__tile">
               <h2 class="tiles__entitle">
-                <a href="./my-account.php?update=1" class="link tiles__link">Zaktualizuj</a>
+                <a href="./my-account.php?update=yup" class="link tiles__link">Zaktualizuj</a>
               </h2>
             </section>
             <section class="tiles__tile">
@@ -42,16 +45,8 @@
                 <button class="btn" id="deleteUser">Usuń</button>
               </h2>
             </section>
-            <?php
-            // print_r($_SESSION);
-              if(!empty($_GET['del'])) {
-                echo <<< SCR
-                
-SCR;
-              }
-            ?>
             <?php 
-              if(!empty($_GET["update"])) {
+              if($_GET["update"] == "yup") {
                 $login = $_SESSION["user"]["name"];
                 $sql = "SELECT * FROM `users` WHERE `login` = '$login';";
                 $res = mysqli_query($link, $sql);
@@ -92,14 +87,13 @@ F;
         </section>
       </article>
     </main>
-    <?php include("templates/footer.php"); ?>
+    <?php include("templates/./footer.php"); ?>
   </div>
   <script src="scripts/script.js"></script>
   <script>
     const deleteConfirmation = () => {
       let ask = window.confirm("Czy na pewno chcesz usunąć konto?");
       if(ask) {
-        window.alert("Twoje konto zostało pomyślnie usunięte.");
         window.location.href = "./scripts/del-user.php";
       } else {
         window.location.href = "./my-account.php";
