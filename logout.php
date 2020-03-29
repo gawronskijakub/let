@@ -3,7 +3,7 @@
   // logout session unsetting
 
   unset($_SESSION['user']);
-  header("location: login.php");
+  header("location: ./login.php");
 
   die("Redirecting to login page");
 

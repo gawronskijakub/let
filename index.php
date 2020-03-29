@@ -1,16 +1,24 @@
 <?php 
-  include("scripts/connect.php");
-  include("templates/config.php");
+  include("./scripts/connect.php");
+  include("./templates/config.php");
   session_start();
+
+  // if(!empty($_SESSION["user"])) {
+  //   if($_SESSION["user"]["admin_status"] === "admin") {
+  //     header("Location: ./admin-panel.php");
+  //   } else {
+  //     header("Location: ./user-panel.php");
+  //   }
+  // }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <?php include("templates/head-tag.php"); ?>
+  <?php include("./templates/head-tag.php"); ?>
 </head>
 <body>
   <div class="wrap">
-    <?php include("templates/header.php"); ?>
+    <?php include("./templates/header.php"); ?>
     <main class="main">
       <article class="article">
         <section class="article__section">
@@ -22,8 +30,8 @@
         </section>
       </article>
     </main>
-    <?php include("templates/footer.php"); ?>
+    <?php include("./templates/footer.php"); ?>
   </div>
-  <script src="scripts/script.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

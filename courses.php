@@ -1,9 +1,9 @@
 <?php 
-  include("templates/config.php"); 
+  include("./templates/config.php"); 
   session_start();
 
   if(empty($_SESSION['user'])) {
-    header("location: login.php");
+    header("location: ./login.php");
 
     die("Redirecting to login page");
   }
@@ -11,15 +11,15 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <?php include("templates/head-tag.php"); ?>
+  <?php include("./templates/head-tag.php"); ?>
 </head>
 <body>
   <div class="wrap">
     <?php 
       if($_SESSION["user"]["admin_status"] === "admin") {
-        include("templates/header-logged-admin.php"); 
+        include("./templates/header-logged-admin.php"); 
       } else {
-        include("templates/header-logged.php"); 
+        include("./templates/header-logged.php"); 
       }
     ?>
     <main class="main">
@@ -28,7 +28,7 @@
           <section class="tiles">
             <section class="tiles__tile">
               <h2 class="tiles__entitle">
-                <a href="./translating.php" class="tiles__link link">
+                <a href="./dictionary.php" class="tiles__link link">
                   Nauka słówek
                   <i class="fa fa-book-open"></i>
                 </a>
@@ -64,7 +64,7 @@
         </section>
       </article>
     </main>
-    <?php include("templates/footer.php"); ?>
+    <?php include("./templates/footer.php"); ?>
   </div>
   <script src="./scripts/script.js"></script>
 </body>

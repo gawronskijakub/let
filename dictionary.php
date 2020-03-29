@@ -12,15 +12,15 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <?php include("templates/head-tag.php"); ?>
+  <?php include("./templates/head-tag.php"); ?>
 </head>
 <body>
   <div class="wrap">
     <?php 
       if($_SESSION["user"]["admin_status"] === "admin") {
-        include("templates/header-logged-admin.php"); 
+        include("./templates/header-logged-admin.php"); 
       } else {
-        include("templates/header-logged.php"); 
+        include("./templates/header-logged.php"); 
       }
     ?>
     <main class="main">
@@ -36,7 +36,7 @@
                 </div>
                 <div id="slider1">
                   <?php
-                    $sql = "SELECT `polish` FROM `words`;";
+                    $sql = "SELECT `polish` FROM `words` ORDER BY `words_id`;";
                     $res = mysqli_query($link, $sql);
                     echo "<ul class='list'>";
                     while($row = mysqli_fetch_assoc($res)) {
@@ -47,7 +47,7 @@
                 </div>
                 <div id="slider2">
                   <?php
-                    $sql = "SELECT `english` FROM `words`;";
+                    $sql = "SELECT `english` FROM `words` ORDER BY `words_id`;";
                     $res = mysqli_query($link, $sql);
                     echo "<ul class='list'>";
                     while($row = mysqli_fetch_assoc($res)) {
@@ -62,7 +62,7 @@
         </section>
       </article>
     </main>
-    <?php include("templates/footer.php"); ?>
+    <?php include("./templates/footer.php"); ?>
   </div>
   <script src="./scripts/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

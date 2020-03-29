@@ -1,8 +1,8 @@
 <?php 
-  include("templates/config.php"); 
+  include("./templates/config.php"); 
   session_start();
 
-  if(!empty($_GET['wrong_pass'])) {
+  if(!empty($_GET['wrong_pass']) && $_GET["wrong_pass"] == "yup") {
     echo "
     <script>
       var ask = window.confirm('Błedne hasło. Spróbuj ponownie.');
@@ -11,7 +11,7 @@
     </script>";
   }
 
-  if(!empty($_GET['no_data'])) {
+  if(!empty($_GET['no_data']) && $_GET["no_data"] == "yup") {
     echo "
     <script>
       var ask = window.confirm('Nie ma takiego użytkownika');
@@ -26,20 +26,28 @@
     ";
   }
 
+  // if(!empty($_SESSION["user"])) {
+  //   if($_SESSION["user"]["admin_status"] === "admin") {
+  //     header("Location: ./admin-panel.php");
+  //   } else {
+  //     header("Location: ./user-panel.php");
+  //   }
+  // }
+
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <?php include("templates/head-tag.php"); ?>
+  <?php include("./templates/head-tag.php"); ?>
 </head>
 <body>
   <div class="wrap">
-    <?php include("templates/header.php"); ?>
+    <?php include("./templates/header.php"); ?>
     <main class="main">
       <article class="article">
         <section class="article__section" id="log">
           <section class="form__container">
-            <form action="submit-login.php" method="post" class="article__form" id="login_form">
+            <form action="./submit-login.php" method="post" class="article__form" id="login_form">
                 <h2 class="form__header">Zaloguj się: </h2>
                 <label for="login_log">Nazwa użytkownika: </label>
                 <input type="text" name="login_log" tabindex="1" required autocomplete="off">
@@ -79,8 +87,8 @@
         </section>
       </article>
     </main>
-    <?php include("templates/footer.php"); ?>
-    <script src="/let/scripts/script.js"></script>
+    <?php include("./templates/footer.php"); ?>
+    <script src="./scripts/script.js"></script>
   </div>
 </body>
 </html>

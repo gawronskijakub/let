@@ -1,6 +1,14 @@
 <?php 
   include("templates/config.php"); 
   session_start();
+
+  // if(!empty($_SESSION["user"])) {
+  //   if($_SESSION["user"]["admin_status"] === "admin") {
+  //     header("Location: ./admin-panel.php");
+  //   } else {
+  //     header("Location: ./user-panel.php");
+  //   }
+  // }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">

@@ -30,27 +30,27 @@
           $_SESSION['user']['login'] = $row['login'];
           $_SESSION['user']['email'] = $row['email'];
           $_SESSION['user']['birth_date'] = $row['birth_date'];
+          $_SESSION['user']['logged_in'] = true;
+          $_SESSION['user']['name'] = $dbLogin;
+          $_SESSION['user']['admin_status'] = $dbAdmin;
         }
-      $_SESSION['user']['logged_in'] = true;
-      $_SESSION['user']['name'] = $dbLogin;
-      $_SESSION['user']['admin_status'] = $dbAdmin;
 
       if($dbAdmin == "admin") {
-        header("location: admin-panel.php");  
+        header("location: ./admin-panel.php");  
       } 
       else {
-        header("location: user-panel.php");
+        header("location: ./user-panel.php");
       }
     }
 
     else {
-      header("location: login.php?wrong_pass=1");
+      header("location: ./login.php?wrong_pass=yup");
     }
     
   }
   
   else {
-    header("location: login.php?no_data=1");
+    header("location: ./login.php?no_data=yup");
   }
   
   

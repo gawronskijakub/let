@@ -1,12 +1,12 @@
 <?php
 	session_start();
-	include("connect.php");
+	include("./connect.php");
 
 	//adding to database
 
 	$stmt = mysqli_prepare($link, "INSERT INTO `users` (`first_name`, `last_name`, `login`, `password_hash`, `email`, `birth_date`, `create_date`, `account_status`, `account_type`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-  include("vars.php");
+  include("./vars.php");
 
 	mysqli_stmt_bind_param($stmt, "sssssssss", $first_name, $last_name, $login, $password_hash, $email, $birth_date, $create_date, $account_status, $account_type);
 

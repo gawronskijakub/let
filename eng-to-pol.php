@@ -8,10 +8,6 @@
 
     die("Redirecting to login page");
   }
-
-  if($_SESSION['user']['admin_status'] == "admin") {
-    header("location: courses-admin.php");
-  }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">

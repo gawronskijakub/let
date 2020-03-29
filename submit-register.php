@@ -31,9 +31,8 @@
         $_SESSION['user']['birth_date'] = stripslashes($birth_date);
         $_SESSION['user']['create_date'] = $create_date;
         $_SESSION['user']['account_status'] = $account_status;
-        $_SESSION['user']['account_type'] = $account_type;
+        $_SESSION['user']['admin_status'] = $account_type;
 
-        
 
         include("./scripts/add-user.php");
 

@@ -11,7 +11,7 @@
   $birth_date = $_SESSION['user']['birth_date'];
   $create_date = $_SESSION['user']['create_date'];
   $account_status = $_SESSION['user']['account_status'];
-  $account_type = $_SESSION['user']['account_type'];
+  $account_type = $_SESSION['user']['admin_status'];
 
   unset($_SESSION['user']['password_hash']);
 ?>
