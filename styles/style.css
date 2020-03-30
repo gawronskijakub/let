@@ -591,6 +591,7 @@ html, body {
   height: 100%;
   width: 75vw;
   border-collapse: collapse;
+  font-size: 125%;
 }
 
 .wrap .main .article__section .users .table tr, .wrap .main .article__section .users .table th, .wrap .main .article__section .users .table td {

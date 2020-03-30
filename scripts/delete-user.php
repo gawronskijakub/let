@@ -14,7 +14,11 @@
 		mysqli_query($link, $sql);
 
 		if(mysqli_affected_rows($link) > 0) {
-			header("Location: ./../users.php?deletedA=yup");
+			if($_SESSION["user"]["id"] === $id) {
+				header("Location: ./../logout.php");
+			} else {
+				header("Location: ./../users.php?deletedA=yup");
+			}
 		} else {
 			header("Location: ./../users.php?deletedA=nope");
 		}
