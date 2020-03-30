@@ -15,8 +15,14 @@
 
 		$_SESSION["user"]["account_status"] = $status;
 
+		
+
 		if(mysqli_affected_rows($link) > 0) {
-			header("Location: ./../users.php?updatedS=yup");
+			if($_SESSION["user"]["id"] === $id) {
+				header("Location: ./../logout.php");
+			} else  {
+				header("Location: ./../users.php?updatedS=yup");
+			}
 		} else {
 			header("Location: ./../users.php?updatedS=nope");
 		}

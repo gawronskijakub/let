@@ -16,7 +16,11 @@
 		$_SESSION["user"]["admin_status"] = $type;
 
 		if(mysqli_affected_rows($link) > 0) {
-			header("Location: ./../users.php?updatedT=yup");
+			if($_SESSION["user"]["id"] === $id) {
+				header("Location: ./../logout.php");
+			} else {
+				header("Location: ./../users.php?updatedT=yup");
+			}
 		} else {
 			header("Location: ./../users.php?updatedT=nope");
 		}
