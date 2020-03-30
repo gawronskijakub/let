@@ -24,6 +24,14 @@
   if($_GET["updatedT"] == "nope") {
     echo "<script>alert('Typ konta użytkownika nie został zaktualizowany.');</script>";
   }
+
+  if($_GET["deletedA"] == "yup") {
+    echo "<script>alert('Konto użytkownika zostało usunięte.');</script>";
+  }
+
+  if($_GET["deletedA"] == "nope") {
+    echo "<script>alert('Konto użytkownika nie zostało usunięte.');</script>";
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -93,7 +101,12 @@
                       </a>
                     </td>";
                   }
-              echo "<td><i class='fa fa-times' style='font-size: 250%; color: crimson;'></i></td>
+              echo "
+              <td>
+                <a href='./scripts/delete-user.php?id=$row[user_id]' class='link'>
+                  <i class='fa fa-times' style='font-size: 250%; color: crimson;'></i>
+                </a>
+              </td>
               </tr>";
               }
 
