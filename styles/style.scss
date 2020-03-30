@@ -427,6 +427,28 @@ html, body {
             }
           }
         }
+        .users {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .table {
+            background-color: #abc;
+            height: 100%;
+            width: 75vw;
+            border-collapse: collapse;
+            tr, th, td {
+              border: 2px solid black;
+              padding: 2.5px;
+              text-align: center;
+            }
+            th {
+              background-color: #ababab;
+              height: 50px;
+            }
+          }
+        }
       }
     }
   }

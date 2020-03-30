@@ -572,6 +572,38 @@ html, body {
   color: inherit;
 }
 
+.wrap .main .article__section .users {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .main .article__section .users .table {
+  background-color: #abc;
+  height: 100%;
+  width: 75vw;
+  border-collapse: collapse;
+}
+
+.wrap .main .article__section .users .table tr, .wrap .main .article__section .users .table th, .wrap .main .article__section .users .table td {
+  border: 2px solid black;
+  padding: 2.5px;
+  text-align: center;
+}
+
+.wrap .main .article__section .users .table th {
+  background-color: #ababab;
+  height: 50px;
+}
+
 .wrap .footer {
   display: -webkit-box;
   display: -ms-flexbox;

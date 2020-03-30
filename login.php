@@ -2,21 +2,32 @@
   include("./templates/config.php"); 
   session_start();
 
+  if(isset($_SESSION["user"]) && $_SESSION["user"]["logged_in"] == true) {
+    if($_SESSION["user"]["admin_status"] === "admin") {
+      header("Location: ./admin-panel.php");
+    } else {
+      header("Location: ./user-panel.php");
+    }
+  }
+
   if(!empty($_GET['wrong_pass']) && $_GET["wrong_pass"] == "yup") {
     echo "
     <script>
-      var ask = window.confirm('Błedne hasło. Spróbuj ponownie.');
-      if(ask) window.location = './login.php';
-      else window.location = './login.php';
+      alert('Błedne hasło. Spróbuj ponownie.');
     </script>";
   }
 
   if(!empty($_GET['no_data']) && $_GET["no_data"] == "yup") {
     echo "
     <script>
-      var ask = window.confirm('Nie ma takiego użytkownika');
-      if(ask) window.location = './login.php';
-      else window.location = './login.php';
+      alert('Nie ma takiego użytkownika');
+    </script>";
+  }
+
+  if(!empty($_GET['disabled']) && $_GET["disabled"] == "yup") {
+    echo "
+    <script>
+    alert('Twoje konto zostało wyłączone. Skontaktuj się z administratorem.');
     </script>";
   }
 
@@ -26,13 +37,7 @@
     ";
   }
 
-  // if(!empty($_SESSION["user"])) {
-  //   if($_SESSION["user"]["admin_status"] === "admin") {
-  //     header("Location: ./admin-panel.php");
-  //   } else {
-  //     header("Location: ./user-panel.php");
-  //   }
-  // }
+  
 
 ?>
 <!DOCTYPE html>

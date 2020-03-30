@@ -4,7 +4,7 @@
 
   include("./scripts/connect.php");
 
-  $sql = "SELECT `login`, `password_hash`, `account_type` FROM `users` WHERE `login` = ?;";
+  $sql = "SELECT `login`, `password_hash`, `account_status`, `account_type` FROM `users` WHERE `login` = ?;";
 
   
   $stmt = mysqli_prepare($link, $sql);
@@ -14,7 +14,7 @@
 
   if(mysqli_stmt_num_rows($stmt) > 0) {
 
-    mysqli_stmt_bind_result($stmt, $dbLogin, $dbPass, $dbAdmin);
+    mysqli_stmt_bind_result($stmt, $dbLogin, $dbPass, $dbStatus, $dbAdmin);
     mysqli_stmt_fetch($stmt);
 
 
@@ -23,23 +23,29 @@
       $user = "SELECT * FROM `users` WHERE `login` = '$dbLogin';";
       $res = mysqli_query($link, $user);
 
-      while($row = mysqli_fetch_assoc($res)) {
-          $_SESSION['user']['id'] = $row['user_id'];
-          $_SESSION['user']['first_name'] = $row['first_name'];
-          $_SESSION['user']['last_name'] = $row['last_name'];
-          $_SESSION['user']['login'] = $row['login'];
-          $_SESSION['user']['email'] = $row['email'];
-          $_SESSION['user']['birth_date'] = $row['birth_date'];
-          $_SESSION['user']['logged_in'] = true;
-          $_SESSION['user']['name'] = $dbLogin;
-          $_SESSION['user']['admin_status'] = $dbAdmin;
-        }
+      if($dbStatus == "active") {
 
-      if($dbAdmin == "admin") {
-        header("location: ./admin-panel.php");  
-      } 
-      else {
-        header("location: ./user-panel.php");
+        while($row = mysqli_fetch_assoc($res)) {
+            $_SESSION['user']['id'] = $row['user_id'];
+            $_SESSION['user']['first_name'] = $row['first_name'];
+            $_SESSION['user']['last_name'] = $row['last_name'];
+            $_SESSION['user']['login'] = $row['login'];
+            $_SESSION['user']['email'] = $row['email'];
+            $_SESSION['user']['birth_date'] = $row['birth_date'];
+
+            $_SESSION['user']['logged_in'] = true;
+            $_SESSION['user']['admin_status'] = $dbAdmin;
+            $_SESSION['user']['account_status'] = $dbStatus;
+          }
+
+          if($dbAdmin == "admin") {
+            header("location: ./admin-panel.php");  
+          } 
+          else {
+            header("location: ./user-panel.php");
+          }
+      } else {
+        header("Location: ./login.php?disabled=yup");
       }
     }
 

@@ -8,6 +8,22 @@
 
     die("Redirecting to login page");
   }
+
+  if($_GET["updatedS"] == "yup") {
+    echo "<script>alert('Status użytkownika został zaktualizowany.');</script>";
+  }
+
+  if($_GET["updatedS"] == "nope") {
+    echo "<script>alert('Status użytkownika nie został zaktualizowany.');</script>";
+  }
+  
+  if($_GET["updatedT"] == "yup") {
+    echo "<script>alert('Typ konta użytkownika został zaktualizowany.');</script>";
+  }
+
+  if($_GET["updatedT"] == "nope") {
+    echo "<script>alert('Typ konta użytkownika nie został zaktualizowany.');</script>";
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -24,31 +40,60 @@
       }
     ?>
     <main class="main">
-      <article class="article">
+      <article class="article" style="overflow: auto;">
         <section class="article__section">
           <section class="users">
             <?php
               $users = "SELECT * FROM `users`;";
               $res = mysqli_query($link, $users);
-              echo "<table>";
+              echo "<table class='table'>";
               echo "<tr>
                 <th>ID</th>
-                <th>Imię</th>
-                <th>Nazwisko</th>
                 <th>Login</th>
-                <th>E-mail</th>
                 <th>Status konta</th>
                 <th>Typ konta</th>
+                <th>Zmień status konta</th>
+                <th>Zmień typ konta</th>
+                <th>Usuń konto</th>
               </tr>";
               while ($row = mysqli_fetch_assoc($res)) {
                 echo "<tr>
-                  <td>$row[user_id]</td>
-                  <td>$row[first_name]</td>
-                  <td>$row[last_name]</td>
+                  <th>$row[user_id]</th>
                   <td>$row[login]</td>
-                  <td>$row[email]</td>
                   <td>$row[account_status]</td>
-                  <td>$row[account_type]</td>
+                  <td>$row[account_type]</td>";
+                  if($row["account_status"] === "active") {
+                    echo "
+                    <td>
+                      <a href='./scripts/change-status.php?id=$row[user_id]&status=disabled' class='link'>
+                        active <i class='fas fa-arrow-right'></i> disabled
+                      </a>
+                    </td>
+                    ";
+                  } else {
+                    echo "
+                    <td>
+                      <a href='./scripts/change-status.php?id=$row[user_id]&status=active' class='link'>
+                        disabled <i class='fas fa-arrow-right'></i> active
+                      </a>
+                    </td>";
+                  }
+                  if($row["account_type"] === "admin") {
+                    echo "
+                    <td>
+                      <a href='./scripts/change-type.php?id=$row[user_id]&type=user' class='link'>
+                        admin <i class='fas fa-arrow-right'></i> user
+                      </a>
+                    </td>";
+                  } else {
+                    echo "
+                    <td>
+                      <a href='./scripts/change-type.php?id=$row[user_id]&type=admin' class='link'>
+                        user <i class='fas fa-arrow-right'></i> admin
+                      </a>
+                    </td>";
+                  }
+              echo "<td><i class='fa fa-times' style='font-size: 250%; color: crimson;'></i></td>
               </tr>";
               }
 
