@@ -25,15 +25,24 @@
           <section class="home">
             <h1 class="home__entitle">Witaj na LET</h1>
             <div class="home__container">
-              <span class="home__entrance">Co?</span>
-              <p class="home__content"><span class="bold">LET (Learn English Today)</span> to strona, która ma na celu pomóc w nauce języka angielskiego technicznego / z zakresu IT (słówka ogólnie powiązane z działem Information Technology).</p>
+              <h3 class="home__entrance">Co? <i class="fa fa-arrow-right"></i></h3>
+              <p class="home__content"><span class="bold">LET (Learn English Today)</span> to strona, która ma na celu pomóc w nauce języka angielskiego technicznego / z zakresu IT.</p>
             </div>
-            <h3 class="home__entrance">Dla kogo?</h3>
-            <p class="home__content">Dla każdego, kto ma ochotę pouczyć się terminów z zagadnienia IT.</p>
-            <h3 class="home__entrance">Po co?</h3>
-            <p class="home__content">LET to aplikacja internetowa stworzona na projekt szkolny w technikum w roku szkolnym 2019/2020.</p>
-            <h3 class="home__entrance">Jak?</h3>
-            <p class="home__content">Wejdź na zakładkę <span class="italic bold">Zaloguj się</span>, zarejestruj się i korzystaj ;)</p>
+            <hr>
+            <div class="home__container">
+              <h3 class="home__entrance">Dla kogo? <i class="fa fa-arrow-right"></i></h3>
+              <p class="home__content">Dla każdego, kto ma ochotę pouczyć się terminów z zagadnienia IT.</p>
+            </div>
+            <hr>
+            <div class="home__container">
+              <h3 class="home__entrance">Po co? <i class="fa fa-arrow-right"></i></h3>
+              <p class="home__content">LET to aplikacja internetowa stworzona na projekt szkolny w technikum w roku szkolnym 2019/2020.</p>
+            </div>
+            <hr>
+            <div class="home__container">
+              <h3 class="home__entrance">Jak? <i class="fa fa-arrow-right"></i></h3>
+              <p class="home__content">Wejdź na zakładkę <span class="italic bold">Zaloguj się</span>, zarejestruj się i korzystaj ;)</p>
+            </div>
           </section>
         </section>
       </article>
@@ -41,14 +50,5 @@
     <?php include("./templates/footer.php"); ?>
   </div>
   <script src="./scripts/script.js"></script>
-  <script>
-    const entrances = document.querySelectorAll(".home__entrance");
-    const active = e => {
-      e.target.classList.toggle("active");
-    }
-    entrances.forEach(entrance => {
-      entrance.addEventListener("click", active);
-    });
-  </script>
 </body>
 </html>

@@ -31,6 +31,24 @@ html, body {
   font-style: italic;
 }
 
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two0s {
+  font-size: 200%;
+}
+
+.onefifty {
+  font-size: 150%;
+}
+
+.marginCenter {
+  margin: 0 auto;
+}
+
 .wrap {
   background-color: #abc;
   width: 100%;
@@ -461,39 +479,31 @@ html, body {
         .home {
           width: 100%;
           height: 100%;
+          font-size: 120%;
 
           &__entitle {
-            font-size: 36px;
             text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
           }
 
           &__container {
-            background-color: #fff;
-            height: 75px;
-            // overflow: hidden;
             width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: space-between;
+            cursor: default;
 
             .home__entrance {
-              display: inline-block;
-              line-height: 75px;
-              font-size: 24px;
               text-align: center;
-              height: 75px;
-              background-color: #edf;
-              transition: .5s;
-              width: 100%;
-
-              &.active {
-                width: 10%;
-              }
+              width: 15%;
+              transition: .3s;
+              border-radius: 50%;
             }
-  
+            
             .home__content {
               text-align: center;
-              height: 75px;
-              width: 90%;
-              background-color: #aaa;
-              display: inline-block;
+              width: 80%;
             }
           }
         }
@@ -604,8 +614,6 @@ html, body {
         .article__section { 
           .form__container {
             .article__form {
-              // flex-flow: column nowrap;
-              // align-items: center;
               padding: 5px;
             }
           }
@@ -621,10 +629,6 @@ html, body {
         .article__section { 
           .form__container {
             width: 100%;
-            // .article__form {
-            //   flex-flow: column nowrap;
-            //   align-items: center;
-            // }
           }
         }
       }

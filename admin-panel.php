@@ -30,11 +30,20 @@
     <main class="main">
       <article class="article">
         <section class="article__section">
-          <section class="tiles">
-            <section class="tiles__tile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est optio odio dignissimos, nam delectus assumenda sed obcaecati laboriosam dicta illo maiores, maxime dolorum harum, modi omnis quaerat quam commodi.Minima id quam adipisci ipsa. Pariatur, voluptas assumenda. Doloremque maxime deserunt consequatur vel consectetur omnis beatae quae, accusamus rerum sequi, commodi cumque sunt, necessitatibus eum ut nesciunt doloribus veritatis laudantium!</section>
-            <section class="tiles__tile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est optio odio dignissimos, nam delectus assumenda sed obcaecati laboriosam dicta illo maiores, maxime dolorum harum, modi omnis quaerat quam commodi.Minima id quam adipisci ipsa. Pariatur, voluptas assumenda. Doloremque maxime deserunt consequatur vel consectetur omnis beatae quae, accusamus rerum sequi, commodi cumque sunt, necessitatibus eum ut nesciunt doloribus veritatis laudantium!</section>
-            <section class="tiles__tile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est optio odio dignissimos, nam delectus assumenda sed obcaecati laboriosam dicta illo maiores, maxime dolorum harum, modi omnis quaerat quam commodi.Minima id quam adipisci ipsa. Pariatur, voluptas assumenda. Doloremque maxime deserunt consequatur vel consectetur omnis beatae quae, accusamus rerum sequi, commodi cumque sunt, necessitatibus eum ut nesciunt doloribus veritatis laudantium!</section>
-            <section class="tiles__tile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est optio odio dignissimos, nam delectus assumenda sed obcaecati laboriosam dicta illo maiores, maxime dolorum harum, modi omnis quaerat quam commodi.Minima id quam adipisci ipsa. Pariatur, voluptas assumenda. Doloremque maxime deserunt consequatur vel consectetur omnis beatae quae, accusamus rerum sequi, commodi cumque sunt, necessitatibus eum ut nesciunt doloribus veritatis laudantium!</section>
+        <section class="home">
+            <h1 class="home__entitle">Witaj, <?php echo $_SESSION["user"]["login"]; ?></h1>
+            <div class="home__container">
+              <p class="home__content marginCenter">Aby przejść do kursów, wejdź w zakładkę <span class="bold italic">Kursy</span></p>
+            </div>
+            <div class="home__container">
+              <p class="home__content marginCenter">W celu aktualizacji konta proszę przejść do zakładki <span class="bold italic">Moje konto</span></p>
+            </div>
+            <div class="home__container">
+              <p class="home__content marginCenter">Aby zarządzać kontami wszystkich użytkowników, proszę udać się do zakładki <span class="bold italic">Użytkownicy</span></p>
+            </div>
+            <div class="home__container">
+              <p class="home__content marginCenter">W celu wylogowania się wciśnij <span class="bold italic">Wyloguj się</span></p>
+            </div>
           </section>
         </section>
       </article>

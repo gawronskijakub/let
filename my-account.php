@@ -26,9 +26,9 @@
   <div class="wrap">
     <?php 
       if($_SESSION["user"]["admin_status"] === "admin") {
-        include("templates/header-logged-admin.php"); 
+        include("./templates/header-logged-admin.php"); 
       } else {
-        include("templates/header-logged.php"); 
+        include("./templates/header-logged.php"); 
       }
     ?>
     <main class="main">
@@ -47,7 +47,7 @@
             </section>
             <?php 
               if($_GET["update"] == "yup") {
-                $login = $_SESSION["user"]["name"];
+                $login = $_SESSION["user"]["login"];
                 $sql = "SELECT * FROM `users` WHERE `login` = '$login';";
                 $res = mysqli_query($link, $sql);
                 $row = mysqli_fetch_assoc($link, $sql);

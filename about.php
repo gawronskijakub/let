@@ -1,5 +1,5 @@
 <?php 
-  include("templates/config.php");
+  include("./templates/config.php");
   session_start();
   
   if(isset($_SESSION["user"]) && $_SESSION["user"]["logged_in"] == true) {
@@ -13,24 +13,29 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <?php include("templates/head-tag.php"); ?>
+  <?php include("./templates/head-tag.php"); ?>
 </head>
 <body>
   <div class="wrap">
-    <?php include("templates/header.php"); ?>
+    <?php include("./templates/header.php"); ?>
     <main class="main">
       <article class="article">
         <section class="article__section">    
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur laborum deserunt nulla unde amet nisi ipsa iure, similique architecto placeat necessitatibus, sed hic maxime odio, inventore nobis ipsum quia sequi?
-          Ducimus unde tempore qui veritatis quos nihil repudiandae quod, dignissimos reiciendis beatae aliquid similique deserunt tempora? Blanditiis impedit quis, ex iure aspernatur assumenda, quos porro eveniet neque adipisci, possimus vero.
-          Autem esse minus, animi repellat officia totam ipsa alias soluta sed sit quidem quaerat, reprehenderit qui doloremque tempora, reiciendis iusto eaque voluptatum. Repellendus incidunt voluptatibus eligendi rem, veniam amet id.
-          Necessitatibus quam nisi modi hic doloribus cum, quidem illo, accusamus provident omnis harum autem. Quasi molestiae, facilis dolorem odit asperiores saepe unde, quos explicabo, quidem eos nemo. Nesciunt, neque placeat.
-          Autem nam necessitatibus sed odit dolorem error deleniti neque eos aut similique culpa ipsum consequuntur, libero hic! Velit quod maxime deleniti, delectus dolor at, aspernatur reprehenderit, similique a eveniet quos.
+        <section class="home">
+           <h1 class="home__entitle">O autorze</h1>
+            <div class="home__container" style="height: 80%;">
+              <p class="home__content" style="width: 100%; text-align: justify;">
+                Nazywam się Jakub Gawroński. Jestem uczniem klasy maturalnej roku 2019/2020. Interesuję się informatyką w szerokim tego słowa znaczeniu, czyli gry komputerowe, ciekawostki ze świata IT, programowanie itp., dokształcaniem i samodoskonaleniem się oraz lubię spędzać czas ze znajomymi. <br>
+                Strona ta powstała na szkolny projekt i prawdopodobnie ze względu na (nie)mały bałagan, brak profesjonalizmu oraz lenistwo (chęć zrobienia interaktywnych kursów przeobraziła się w slider ze słówkami 1:1) repozytorium z tym projektem zostanie ukryte... <br>
+                Więcej informacji w zakładce <span class="bold italic">Kontakt</span>.
+              </p>
+            </div>
+          </section>
         </section>
       </article>
     </main>
-    <?php include("templates/footer.php"); ?>
+    <?php include("./templates/footer.php"); ?>
   </div>
-  <script src="scripts/script.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

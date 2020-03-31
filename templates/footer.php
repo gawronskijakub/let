@@ -8,7 +8,7 @@
     <a href="mailto:gawronskijakub0@gmail.com" class="footer__link link">
       <i class="fas fa-envelope-square"></i>
     </a>
-    <a href="https://www.facebook.com/kubek201" class="footer__link link">
+    <a href="https://www.facebook.com/gawronskijakub" class="footer__link link">
       <i class="fab fa-facebook-square"></i>
     </a>
     <a href="https://www.linkedin.com/in/jakub-gawro%C5%84ski-51a14a18b/" class="footer__link link">

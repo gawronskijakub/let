@@ -32,6 +32,30 @@ html, body {
   font-style: italic;
 }
 
+.flexCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.two0s {
+  font-size: 200%;
+}
+
+.onefifty {
+  font-size: 150%;
+}
+
+.marginCenter {
+  margin: 0 auto;
+}
+
 .wrap {
   background-color: #abc;
   width: 100%;
@@ -616,41 +640,38 @@ html, body {
 .wrap .main .article__section .home {
   width: 100%;
   height: 100%;
+  font-size: 120%;
 }
 
 .wrap .main .article__section .home__entitle {
-  font-size: 36px;
   text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
 .wrap .main .article__section .home__container {
-  background-color: #fff;
-  height: 75px;
   width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: default;
 }
 
 .wrap .main .article__section .home__container .home__entrance {
-  display: inline-block;
-  line-height: 75px;
-  font-size: 24px;
   text-align: center;
-  height: 75px;
-  background-color: #edf;
-  -webkit-transition: .5s;
-  transition: .5s;
-  width: 100%;
-}
-
-.wrap .main .article__section .home__container .home__entrance.active {
-  width: 10%;
+  width: 15%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 50%;
 }
 
 .wrap .main .article__section .home__container .home__content {
   text-align: center;
-  height: 75px;
-  width: 90%;
-  background-color: #aaa;
-  display: inline-block;
+  width: 80%;
 }
 
 .wrap .footer {

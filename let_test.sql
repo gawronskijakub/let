@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 09 Lut 2020, 13:27
+-- Czas generowania: 31 Mar 2020, 18:20
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.4.1
 
@@ -21,43 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `let_test`
 --
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `courses`
---
-
-CREATE TABLE `courses` (
-  `course_id` tinyint(3) UNSIGNED NOT NULL,
-  `name` varchar(40) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `courses_words`
---
-
-CREATE TABLE `courses_words` (
-  `cw_id` int(10) UNSIGNED NOT NULL,
-  `course_id` tinyint(3) UNSIGNED NOT NULL,
-  `word_p_e_id` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `statistics`
---
-
-CREATE TABLE `statistics` (
-  `stat_id` tinyint(3) UNSIGNED NOT NULL,
-  `name` varchar(40) NOT NULL,
-  `description` text NOT NULL,
-  `user_id` smallint(5) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -83,80 +46,95 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `login`, `password_hash`, `email`, `birth_date`, `create_date`, `account_status`, `account_type`) VALUES
-(1, 'John', 'Doe', 'admin', '$argon2id$v=19$m=65536,t=4,p=1$MHFyUVZLSkg2bG00UTdMZw$PcqYLVT94suaH9ZF13Icn0R/6/kdH7iF3XRXXf6ckN8', 'learnenglishtoday.contact@gmail.com', '1970-01-01', '2020-02-08', 'active', 'admin');
+(1, 'John', 'Doe', 'admin', '$argon2id$v=19$m=65536,t=4,p=1$MHFyUVZLSkg2bG00UTdMZw$PcqYLVT94suaH9ZF13Icn0R/6/kdH7iF3XRXXf6ckN8', 'john.doe@example.com', '1980-01-01', '2020-02-08', 'active', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `users_courses`
+-- Struktura tabeli dla tabeli `words`
 --
 
-CREATE TABLE `users_courses` (
-  `uc_id` int(10) UNSIGNED NOT NULL,
-  `user_id` smallint(5) UNSIGNED NOT NULL,
-  `course_id` tinyint(3) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
+CREATE TABLE `words` (
+  `words_id` smallint(5) UNSIGNED NOT NULL,
+  `polish` varchar(50) NOT NULL,
+  `english` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Struktura tabeli dla tabeli `words_eng`
+-- Zrzut danych tabeli `words`
 --
 
-CREATE TABLE `words_eng` (
-  `word_e_id` int(10) UNSIGNED NOT NULL,
-  `word_e` varchar(40) NOT NULL,
-  `description_e` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `words_pol`
---
-
-CREATE TABLE `words_pol` (
-  `word_p_id` int(10) UNSIGNED NOT NULL,
-  `word_p` varchar(40) NOT NULL,
-  `description_p` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `words_pol_eng`
---
-
-CREATE TABLE `words_pol_eng` (
-  `word_p_e_id` int(10) UNSIGNED NOT NULL,
-  `word_p_id` int(10) UNSIGNED NOT NULL,
-  `word_e_id` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `words` (`words_id`, `polish`, `english`) VALUES
+(1, 'administrator', 'administrator'),
+(2, 'algorytm', 'algorithm'),
+(3, 'kopia zapasowa', 'backup'),
+(4, 'przeglądarka internetowa', 'web browser'),
+(5, 'zasilacz', 'charger'),
+(6, 'chmura', 'cloud'),
+(7, 'kod', 'code'),
+(8, 'komenda', 'command'),
+(9, 'zawartość', 'content'),
+(10, 'panel sterowania', 'control panel'),
+(11, 'procesor', 'central processing unit'),
+(12, 'kursor', 'cursor'),
+(13, 'wycinać', 'cut'),
+(14, 'dane', 'data'),
+(15, 'baza danych', 'database'),
+(16, 'usuwać', 'delete'),
+(17, 'wdrażać', 'deploy'),
+(18, 'pulpit', 'desktop'),
+(19, 'urządzenie', 'device'),
+(20, 'dokument', 'document'),
+(21, 'przeciągać', 'drag'),
+(22, 'sterowniki', 'drivers'),
+(23, 'edytować', 'edit'),
+(24, 'szyfrowanie', 'encryption'),
+(25, 'deszyfrowanie', 'decryption'),
+(26, 'błąd', 'error'),
+(27, 'dysk zewnętrzny', 'external drive'),
+(28, 'wentylator', 'fan'),
+(29, 'plik', 'file'),
+(30, 'folder', 'folder'),
+(31, 'czcionka', 'font'),
+(32, 'dysk twardy', 'hard drive'),
+(33, 'ikona', 'icon'),
+(34, 'interfejs', 'interface'),
+(35, 'dostęp do internetu', 'internet access'),
+(36, 'zapora sieciowa', 'firewall'),
+(37, 'klawiatura', 'keyboard'),
+(38, 'megabajt', 'megabyte'),
+(39, 'pamięć', 'memory'),
+(40, 'płyta główna', 'motherboard'),
+(41, 'mysz', 'mouse'),
+(42, 'podkładka pod mysz', 'mouse pad'),
+(43, 'sieć', 'network'),
+(44, 'system operacyjny', 'operating system'),
+(45, 'partycja', 'partition'),
+(46, 'hasło', 'password'),
+(47, 'wklejać', 'paste'),
+(48, 'komputer stacjonarny', 'personal computer'),
+(49, 'wtyczka', 'plugin'),
+(50, 'język programowania', 'programming language'),
+(51, 'rozdzielczość ekranu', 'screen resolution'),
+(52, 'serwer', 'server'),
+(53, 'arkusz kalkulacyjny', 'spreadsheet'),
+(54, 'pasek narzędzi', 'toolbar'),
+(55, 'karta dźwiękowa', 'sound card'),
+(56, 'karta graficzna', 'video card'),
+(57, 'sieć bezprzewodowa', 'wireless network'),
+(58, 'głośnik', 'speaker'),
+(59, 'panel dotykowy', 'touchpad'),
+(60, 'kontrola jakości', 'quality assurance'),
+(61, 'oprogramowanie', 'software'),
+(62, 'światłowód', 'fiber'),
+(63, 'obudowa komputera', 'computer case'),
+(64, 'załącznik', 'attachment'),
+(67, 'wygaszacz ekranu', 'screensaver'),
+(70, 'przepustowość', 'bandwidth');
 
 --
 -- Indeksy dla zrzutów tabel
 --
-
---
--- Indeksy dla tabeli `courses`
---
-ALTER TABLE `courses`
-  ADD PRIMARY KEY (`course_id`);
-
---
--- Indeksy dla tabeli `courses_words`
---
-ALTER TABLE `courses_words`
-  ADD PRIMARY KEY (`cw_id`),
-  ADD KEY `course_id` (`course_id`),
-  ADD KEY `word_p_e_id` (`word_p_e_id`);
-
---
--- Indeksy dla tabeli `statistics`
---
-ALTER TABLE `statistics`
-  ADD PRIMARY KEY (`stat_id`),
-  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indeksy dla tabeli `users`
@@ -167,54 +145,16 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `password_hash` (`password_hash`);
 
 --
--- Indeksy dla tabeli `users_courses`
+-- Indeksy dla tabeli `words`
 --
-ALTER TABLE `users_courses`
-  ADD PRIMARY KEY (`uc_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `course_id` (`course_id`);
-
---
--- Indeksy dla tabeli `words_eng`
---
-ALTER TABLE `words_eng`
-  ADD PRIMARY KEY (`word_e_id`);
-
---
--- Indeksy dla tabeli `words_pol`
---
-ALTER TABLE `words_pol`
-  ADD PRIMARY KEY (`word_p_id`);
-
---
--- Indeksy dla tabeli `words_pol_eng`
---
-ALTER TABLE `words_pol_eng`
-  ADD PRIMARY KEY (`word_p_e_id`),
-  ADD KEY `word_p_id` (`word_p_id`),
-  ADD KEY `word_e_id` (`word_e_id`);
+ALTER TABLE `words`
+  ADD PRIMARY KEY (`words_id`),
+  ADD UNIQUE KEY `unique_polish` (`polish`),
+  ADD UNIQUE KEY `unique_english` (`english`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT dla tabeli `courses`
---
-ALTER TABLE `courses`
-  MODIFY `course_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `courses_words`
---
-ALTER TABLE `courses_words`
-  MODIFY `cw_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `statistics`
---
-ALTER TABLE `statistics`
-  MODIFY `stat_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
@@ -223,53 +163,10 @@ ALTER TABLE `users`
   MODIFY `user_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT dla tabeli `users_courses`
+-- AUTO_INCREMENT dla tabeli `words`
 --
-ALTER TABLE `users_courses`
-  MODIFY `uc_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `words_eng`
---
-ALTER TABLE `words_eng`
-  MODIFY `word_e_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `words_pol`
---
-ALTER TABLE `words_pol`
-  MODIFY `word_p_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- Ograniczenia dla zrzutów tabel
---
-
---
--- Ograniczenia dla tabeli `courses_words`
---
-ALTER TABLE `courses_words`
-  ADD CONSTRAINT `courses_words_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`),
-  ADD CONSTRAINT `courses_words_ibfk_2` FOREIGN KEY (`word_p_e_id`) REFERENCES `words_pol_eng` (`word_p_e_id`);
-
---
--- Ograniczenia dla tabeli `statistics`
---
-ALTER TABLE `statistics`
-  ADD CONSTRAINT `statistics_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
-
---
--- Ograniczenia dla tabeli `users_courses`
---
-ALTER TABLE `users_courses`
-  ADD CONSTRAINT `users_courses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-  ADD CONSTRAINT `users_courses_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
-
---
--- Ograniczenia dla tabeli `words_pol_eng`
---
-ALTER TABLE `words_pol_eng`
-  ADD CONSTRAINT `words_pol_eng_ibfk_1` FOREIGN KEY (`word_p_id`) REFERENCES `words_pol` (`word_p_id`),
-  ADD CONSTRAINT `words_pol_eng_ibfk_2` FOREIGN KEY (`word_e_id`) REFERENCES `words_eng` (`word_e_id`);
+ALTER TABLE `words`
+  MODIFY `words_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
