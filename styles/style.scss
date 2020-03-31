@@ -23,6 +23,14 @@ html, body {
   list-style-type: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .wrap {
   background-color: #abc;
   width: 100%;
@@ -447,6 +455,45 @@ html, body {
             th {
               background-color: #ababab;
               height: 50px;
+            }
+          }
+        }
+        .home {
+          width: 100%;
+          height: 100%;
+
+          &__entitle {
+            font-size: 36px;
+            text-align: center;
+          }
+
+          &__container {
+            background-color: #fff;
+            height: 75px;
+            // overflow: hidden;
+            width: 100%;
+
+            .home__entrance {
+              display: inline-block;
+              line-height: 75px;
+              font-size: 24px;
+              text-align: center;
+              height: 75px;
+              background-color: #edf;
+              transition: .5s;
+              width: 100%;
+
+              &.active {
+                width: 10%;
+              }
+            }
+  
+            .home__content {
+              text-align: center;
+              height: 75px;
+              width: 90%;
+              background-color: #aaa;
+              display: inline-block;
             }
           }
         }

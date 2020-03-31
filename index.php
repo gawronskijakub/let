@@ -22,16 +22,33 @@
     <main class="main">
       <article class="article">
         <section class="article__section">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dolorum animi. Sapiente incidunt animi minima quasi quae enim officiis voluptatum modi culpa autem in, tenetur, suscipit non sit nemo. Accusamus.
-          Temporibus dolor corrupti eligendi deleniti ipsum pariatur maxime nam, alias tenetur quia necessitatibus in voluptatem ipsa culpa quaerat soluta nesciunt magnam sed dicta ab rerum. Assumenda, repellendus iste? Ratione, dignissimos?
-          Numquam iure molestiae itaque dolor ab labore deserunt nam fugiat soluta at magnam officiis ea aspernatur saepe sunt, modi dolores? Dolorem neque voluptatem distinctio doloribus, repudiandae adipisci voluptates necessitatibus dolore?
-          Recusandae, necessitatibus odio? Qui, natus ex? Maxime voluptatibus sit, esse magnam tempora totam facilis omnis, harum, minus voluptates soluta tempore natus facere praesentium dolore magni illum alias explicabo commodi mollitia.
-          Totam recusandae magnam, ducimus dolorem eos non doloremque reiciendis iusto eum autem laboriosam rerum mollitia ea voluptatem. Nobis similique architecto numquam eligendi ut magnam ducimus distinctio, blanditiis deserunt consequatur unde?
+          <section class="home">
+            <h1 class="home__entitle">Witaj na LET</h1>
+            <div class="home__container">
+              <span class="home__entrance">Co?</span>
+              <p class="home__content"><span class="bold">LET (Learn English Today)</span> to strona, która ma na celu pomóc w nauce języka angielskiego technicznego / z zakresu IT (słówka ogólnie powiązane z działem Information Technology).</p>
+            </div>
+            <h3 class="home__entrance">Dla kogo?</h3>
+            <p class="home__content">Dla każdego, kto ma ochotę pouczyć się terminów z zagadnienia IT.</p>
+            <h3 class="home__entrance">Po co?</h3>
+            <p class="home__content">LET to aplikacja internetowa stworzona na projekt szkolny w technikum w roku szkolnym 2019/2020.</p>
+            <h3 class="home__entrance">Jak?</h3>
+            <p class="home__content">Wejdź na zakładkę <span class="italic bold">Zaloguj się</span>, zarejestruj się i korzystaj ;)</p>
+          </section>
         </section>
       </article>
     </main>
     <?php include("./templates/footer.php"); ?>
   </div>
   <script src="./scripts/script.js"></script>
+  <script>
+    const entrances = document.querySelectorAll(".home__entrance");
+    const active = e => {
+      e.target.classList.toggle("active");
+    }
+    entrances.forEach(entrance => {
+      entrance.addEventListener("click", active);
+    });
+  </script>
 </body>
 </html>

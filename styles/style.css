@@ -24,6 +24,14 @@ html, body {
   list-style-type: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .wrap {
   background-color: #abc;
   width: 100%;
@@ -603,6 +611,46 @@ html, body {
 .wrap .main .article__section .users .table th {
   background-color: #ababab;
   height: 50px;
+}
+
+.wrap .main .article__section .home {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .main .article__section .home__entitle {
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrap .main .article__section .home__container {
+  background-color: #fff;
+  height: 75px;
+  width: 100%;
+}
+
+.wrap .main .article__section .home__container .home__entrance {
+  display: inline-block;
+  line-height: 75px;
+  font-size: 24px;
+  text-align: center;
+  height: 75px;
+  background-color: #edf;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 100%;
+}
+
+.wrap .main .article__section .home__container .home__entrance.active {
+  width: 10%;
+}
+
+.wrap .main .article__section .home__container .home__content {
+  text-align: center;
+  height: 75px;
+  width: 90%;
+  background-color: #aaa;
+  display: inline-block;
 }
 
 .wrap .footer {
